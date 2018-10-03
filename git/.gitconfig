@@ -1,0 +1,33 @@
+[user]
+	name = Florian PARRENO
+	email = f.parreno@lexik.fr
+[core]
+	excludesfile = /home/florian/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C(white) %s %Cgreen(%ci)%C(bold blue) <%an>%Creset' --abbrev-commit
+    t = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C(white) %s %Cgreen(%ci)%C(bold blue) <%an>%Creset' --abbrev-commit --simplify-by-decoration
+	co = checkout
+	br = checkout -b
+	ci = commit -a
+	st = status -sb
+	update = remote update --prune
+    patch = !git --no-pager diff --no-color
+[color]
+	status = always
+    diff = always
+	ui = true
+[push]
+	default = simple
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
