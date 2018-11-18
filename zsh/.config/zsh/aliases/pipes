@@ -1,0 +1,5 @@
+alias -g H='|head'
+alias -g L='|less'
+
+# vim:syntax=zsh
+

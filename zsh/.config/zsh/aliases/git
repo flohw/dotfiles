@@ -1,0 +1,48 @@
+alias ga='git add'
+alias gapa='git add --patch'
+alias gap='git apply'
+
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch --delete'
+alias gbD='git branch -D'
+
+alias gc='git commit'
+alias gc!='git commit --amend'
+alias gcn!='git commit --no-edit --amend'
+alias gca='git commit --all'
+alias gca!='git commit --all --amend'
+alias gcan='git commit --all --no-edit'
+alias gcan!='git commit --all --no-edit --amend'
+alias gcam='git commit --all --message'
+alias gcmsg='git commit --message'
+alias gcb='git commit -b'
+alias gcm='git checkout master'
+alias gcd='git checkout develop'
+alias gco='git checkout'
+
+alias gd='git diff'
+alias gds='git diff --staged'
+
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+
+alias gp='git push'
+alias gpf!='git push --force'
+
+alias grh='git reset'
+alias grhh='git reset --hard'
+alias grup='git remote update ---prune'
+
+alias gst='git status --short --branch'
+alias gsh='git show'
+alias gsta='git stash push'
+alias gstaa='git stash apply'
+alias gstc='git stash clear'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+
+# vim:syntax=zsh
+
