@@ -1,0 +1,20 @@
+function zsrc() {
+    autoload -U compinit zrecompile
+    compinit -i -d $ZDOTDIR/cache/completion
+
+    zrecompile -p \
+               $ZDOTDIR/.zshrc -- \
+               $ZDOTDIR/cache/completion -- \
+               $ZDOTDIR/cache/functions.zwc $ZDOTDIR/functions/* -- \
+               $ZDOTDIR/cache/aliases.zwc $ZDOTDIR/aliases/* && \
+    command rm -f $ZDOTDIR/.zshrc.zwc.old $ZDOTDIR/cache/functions.zwc.old $ZDOTDIR/cache/aliases.zwc.old
+
+    [[ -n $SHELL ]] && exec ${SHELL#-} || exec zsh
+}
+
+function zcc() {
+    rm -f $ZDOTDIR/.zshrc.zwc $ZDOTDIR/cache/*
+}
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+

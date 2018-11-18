@@ -1,0 +1,11 @@
+alias ls='ls --color=auto'
+alias ll='ls -lH'
+
+alias tree='tree -C'
+
+alias _='sudo'
+
+alias src="source $ZDOTDIR/.zshrc"
+
+# vim:syntax=zsh
+

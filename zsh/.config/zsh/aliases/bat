@@ -1,0 +1,6 @@
+[[ ! -x /usr/bin/bat ]] && exit
+
+alias cat='bat --color always --style auto'
+
+# vim:syntax=zsh
+
