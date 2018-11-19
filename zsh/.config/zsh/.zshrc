@@ -25,18 +25,16 @@ HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 export HISTORY_IGNORE="&|[ ]*|exit|ls|bg|fg|history" # Do not add these commands to history
 setopt hist_ignore_all_dups # Ignore duplicated commands
-setopt hist_ignore_dups # ignore duplicated commands history list
-setopt inc_append_history # add commands to HISTFILE in order of execution
-setopt hist_verify # show command with history expansion to user before running it
+setopt hist_ignore_dups # Ignore duplicated commands history list
+setopt inc_append_history # Add commands to HISTFILE in order of execution
+setopt hist_verify # Show command with history expansion to user before running it
+setopt histignorespace # Ignore command starting with spaces
 
 setopt auto_menu
 
 # source ~/.docker-exec
-# export HISTORY_IGNORE="&|[ ]*|exit|ls|bg|fg|history"
-# setopt HIST_IGNORE_ALL_DUPS
 # export LESS="-F -X $LESS"
 # alias webdav="docker run --rm -d -e USERNAME=florian -e PASSWORD=lexik123 -p 888:80 -v /home/florian/Documents:/var/webdav morrisjobke/webdav"
-# alias cat="bat"
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
