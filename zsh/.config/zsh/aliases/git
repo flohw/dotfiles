@@ -29,6 +29,7 @@ alias gpsup='git push --set-upstream origin $(git_current_branch)'
 alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
 alias gp='git push'
+alias gpf='git push --force-with-lease'
 alias gpf!='git push --force'
 
 alias grh='git reset'
