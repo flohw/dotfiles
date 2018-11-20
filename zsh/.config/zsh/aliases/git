@@ -16,7 +16,7 @@ alias gcan='git commit --all --no-edit'
 alias gcan!='git commit --all --no-edit --amend'
 alias gcam='git commit --all --message'
 alias gcmsg='git commit --message'
-alias gcb='git commit -b'
+alias gcb='git checkout -b'
 alias gcm='git checkout master'
 alias gcd='git checkout develop'
 alias gco='git checkout'
@@ -26,6 +26,7 @@ alias gds='git diff --staged'
 
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
+alias gl='git pull'
 alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
 alias gp='git push'
@@ -36,7 +37,8 @@ alias grh='git reset'
 alias grhh='git reset --hard'
 alias grup='git remote update ---prune'
 
-alias gst='git status --short --branch'
+alias gst='git status --short'
+alias gsb='git status --short --branch'
 alias gsh='git show'
 alias gsta='git stash push'
 alias gstaa='git stash apply'
