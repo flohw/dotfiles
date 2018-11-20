@@ -22,4 +22,6 @@ stow --target $HOME --delete <package-name> -v
 - [ ] Add greenclip configuration
 - [ ] Add xorg related configuration
 - [ ] Add conky configuration
+- [ ] Improve installation of stow packages
+- [ ] Autoconfigure stow arguments with a [`.stowrc` file](https://www.gnu.org/software/stow/manual/html_node/Resource-Files.html)
 
