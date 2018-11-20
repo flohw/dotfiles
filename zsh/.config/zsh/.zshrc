@@ -7,6 +7,7 @@ function load_files_in() {
 
 [[ -d $ZDOTDIR/functions ]] && load_files_in functions 
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
+source $ZDOTDIR/keybindings
 
 # Add hook to source .env file
 autoload -U add-zsh-hook compaudit compinit
