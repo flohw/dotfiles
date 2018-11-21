@@ -1,9 +1,11 @@
 # Run zkbd if config file for $TERM is not fond
+# Rename file from zkbd format to custom
 # return 1 to prevent next lines to be executer
 # DO NOT exit otherwise zsh will be unusable
 if [[ ! -f $ZDOTDIR/.zkbd/$TERM ]]; then
     autoload zkbd && zkbd
     [[ $? -ne 0 ]] && return 1
+    command mv $ZDOTDIR/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE} $ZDOTDIR/.zkbd/$TERM
 fi
 
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Modifying-Text-1
