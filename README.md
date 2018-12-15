@@ -11,6 +11,11 @@ To uninstall a package:
 stow --target $HOME --delete <package-name> -v
 ```
 
+## Dependencies
+
+- [powerlevel9k](https://github.com/bhilburn/powerlevel9k) installed via pacman
+    - [NerFonts](https://github.com/ryanoasis/nerd-fonts)
+
 ## Improvements
 
 - [ ] Add git configuration
