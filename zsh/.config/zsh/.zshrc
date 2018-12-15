@@ -4,7 +4,7 @@ function load_files_in() {
         source $f
     done
 }
-
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 [[ -d $ZDOTDIR/functions ]] && load_files_in functions 
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 source $ZDOTDIR/keybindings
