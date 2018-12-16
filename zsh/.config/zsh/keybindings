@@ -28,6 +28,8 @@ source $ZDOTDIR/.zkbd/$TERM
 [[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-beginning-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
+bindkey '^f' forward-word # [Ctrl-f] - move forward one word
+bindkey '^b' backward-word # [Ctrl-b] - move backward one word
 bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
 bindkey '^w' backward-kill-word # [Ctrl-w] - Remove word backward
