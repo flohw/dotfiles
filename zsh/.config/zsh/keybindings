@@ -10,6 +10,11 @@ fi
 
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Modifying-Text-1
 
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
 source $ZDOTDIR/.zkbd/$TERM
 [[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
 [[ -n ${key[Insert]} ]] && bindkey "${key[Insert]}" overwrite-mode
@@ -18,9 +23,9 @@ source $ZDOTDIR/.zkbd/$TERM
 [[ -n ${key[Delete]} ]] && bindkey "${key[Delete]}" delete-char
 [[ -n ${key[End]} ]] && bindkey "${key[End]}" end-of-line
 [[ -n ${key[PageDown]} ]] && bindkey "${key[PageDown]}" down-line-or-history
-[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-search
+[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-beginning-search
 [[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
-[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
+[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-beginning-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
 bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
