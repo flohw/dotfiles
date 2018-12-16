@@ -25,5 +25,8 @@ source $ZDOTDIR/.zkbd/$TERM
 
 bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
+bindkey '^w' backward-kill-word # [Ctrl-w] - Remove word backward
+bindkey '^a' beginning-of-line # [Ctrl-a] - Go to beginning of line
+bindkey '^e' end-of-line # [Ctrl-e] - Go to end of line
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
