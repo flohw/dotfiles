@@ -1,4 +1,4 @@
-[[ ! -x /usr/bin/bat ]] && exit
+[[ ! -x /usr/bin/bat ]] && return
 
 alias cat='bat --color always --style auto'
 
