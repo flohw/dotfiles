@@ -13,6 +13,7 @@ function load_files_in() {
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
 source $ZDOTDIR/keybindings
 source $ZDOTDIR/theme
+source $ZDOTDIR/history
 
 # Add hook to source .env file
 autoload -U add-zsh-hook compaudit compinit
@@ -22,19 +23,6 @@ add-zsh-hook chpwd () { [[ -f .env ]] && source .env }
 setopt  autocd autopushd pushdignoredups # Autocd and features related to path travel
 
 export EDITOR=vim
-
-#
-# HISTORY
-#
-HISTFILE=$ZDOTDIR/history
-HISTSIZE=10000
-SAVEHIST=$HISTSIZE
-export HISTORY_IGNORE="&|[ ]*|exit|ls|bg|fg|history" # Do not add these commands to history
-setopt hist_ignore_all_dups # Ignore duplicated commands
-setopt hist_ignore_dups # Ignore duplicated commands history list
-setopt inc_append_history # Add commands to HISTFILE in order of execution
-setopt hist_verify # Show command with history expansion to user before running it
-setopt histignorespace # Ignore command starting with spaces
 
 setopt auto_menu
 
