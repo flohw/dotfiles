@@ -1,4 +1,7 @@
 function load_files_in() {
+    if [ ! "$(ls -A $ZDOTDIR/$1/)" ]; then
+        return 0
+    fi
     for f in $ZDOTDIR/$1/*; do
         [[ $f == *.zwc ]] && continue
         source $f
