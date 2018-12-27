@@ -10,6 +10,7 @@ function load_files_in() {
 
 [[ -d $ZDOTDIR/functions ]] && load_files_in functions 
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
+[[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
 source $ZDOTDIR/keybindings
 source $ZDOTDIR/theme
 
