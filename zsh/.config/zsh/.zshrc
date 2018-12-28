@@ -11,10 +11,6 @@ function load_files_in() {
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
 
-# Add hook to source .env file
-autoload -U add-zsh-hook compaudit compinit
-compinit -i -d $ZDOTDIR/cache/completion
-
 setopt  autocd autopushd pushdignoredups # Autocd and features related to path travel
 
 export EDITOR=vim
