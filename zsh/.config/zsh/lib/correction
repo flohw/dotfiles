@@ -5,7 +5,7 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias sudo='nocorrect sudo'
 
-setopt correct_all
+setopt CORRECT_ALL
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
