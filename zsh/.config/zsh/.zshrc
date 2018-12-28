@@ -11,12 +11,6 @@ function load_files_in() {
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
 
-setopt  autocd autopushd pushdignoredups # Autocd and features related to path travel
-
-export EDITOR=vim
-
-setopt auto_menu
-
 # source ~/.docker-exec
 # export LESS="-F -X $LESS"
 # alias webdav="docker run --rm -d -e USERNAME=florian -e PASSWORD=lexik123 -p 888:80 -v /home/florian/Documents:/var/webdav morrisjobke/webdav"

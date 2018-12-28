@@ -1,0 +1,6 @@
+setopt AUTO_CD           # cd if the command is the name of a directory
+setopt AUTO_PUSHD        # Push the old directory onto the directory stack
+setopt PUSHD_IGNORE_DUPS # Don't push multiple copy of the same directory
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
