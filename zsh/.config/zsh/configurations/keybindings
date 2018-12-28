@@ -1,0 +1,40 @@
+# Run zkbd if config file for $TERM is not fond
+# Rename file from zkbd format to custom
+# return 1 to prevent next lines to be executer
+# DO NOT exit otherwise zsh will be unusable
+if [[ ! -f $ZDOTDIR/.zkbd/$TERM ]]; then
+    autoload zkbd && zkbd
+    [[ $? -ne 0 ]] && return 1
+    command mv $ZDOTDIR/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE} $ZDOTDIR/.zkbd/$TERM
+fi
+
+# http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Modifying-Text-1
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+source $ZDOTDIR/.zkbd/$TERM
+[[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
+[[ -n ${key[Insert]} ]]    && bindkey "${key[Insert]}"    overwrite-mode
+[[ -n ${key[Home]} ]]      && bindkey "${key[Home]}"      beginning-of-line
+[[ -n ${key[PageUp]} ]]    && bindkey "${key[PageUp]}"    up-line-or-history
+[[ -n ${key[Delete]} ]]    && bindkey "${key[Delete]}"    delete-char
+[[ -n ${key[End]} ]]       && bindkey "${key[End]}"       end-of-line
+[[ -n ${key[PageDown]} ]]  && bindkey "${key[PageDown]}"  down-line-or-history
+[[ -n ${key[Up]} ]]        && bindkey "${key[Up]}"        up-line-or-beginning-search
+[[ -n ${key[Left]} ]]      && bindkey "${key[Left]}"      backward-char
+[[ -n ${key[Down]} ]]      && bindkey "${key[Down]}"      down-line-or-beginning-search
+[[ -n ${key[Right]} ]]     && bindkey "${key[Right]}"     forward-char
+
+bindkey '^f'      forward-word       # [Ctrl-f] - move forward one word
+bindkey '^b'      backward-word      # [Ctrl-b] - move backward one word
+bindkey '^[[1;5C' forward-word       # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word      # [Ctrl-LeftArrow] - move backward one word
+bindkey '^w'      backward-kill-word # [Ctrl-w] - Remove word backward
+bindkey '^a'      beginning-of-line  # [Ctrl-a] - Go to beginning of line
+bindkey '^e'      end-of-line        # [Ctrl-e] - Go to end of line
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+

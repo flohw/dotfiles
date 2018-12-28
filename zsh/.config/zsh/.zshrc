@@ -8,12 +8,10 @@ function load_files_in() {
     done
 }
 
+[[ -d $ZDOTDIR/configurations ]] && load_files_in configurations
 [[ -d $ZDOTDIR/functions ]] && load_files_in functions 
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
-source $ZDOTDIR/keybindings
-source $ZDOTDIR/theme
-source $ZDOTDIR/history
 
 # Add hook to source .env file
 autoload -U add-zsh-hook compaudit compinit
