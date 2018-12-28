@@ -1,10 +1,11 @@
-CACHE_DIR=$HOME/.cache/zsh/
-[[ ! -d $CACHE_DIR ]] && mkdir -p $CACHE_DIR
-
 autoload -U add-zsh-hook compaudit compinit
-compinit -i -d $CACHE_DIR/completion
+compinit -i -d $ZCACHEDIR/completion
 
-zstyle ':completion:*' menu select
+[[ -z "$LS_COLORS" ]] && (( $+commands[dircolors] )) && eval "$(dircolors -b)"
+
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # File colors on autocomplete
+zstyle ':completion:*' menu select # Menu select on autocomplete
+zstyle ':completion:*' completer _complete _approximate # Autocorrect on autocomplete
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
