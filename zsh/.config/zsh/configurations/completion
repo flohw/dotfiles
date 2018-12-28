@@ -1,3 +1,9 @@
+CACHE_DIR=$HOME/.cache/zsh/
+[[ ! -d $CACHE_DIR ]] && mkdir -p $CACHE_DIR
+
+autoload -U add-zsh-hook compaudit compinit
+compinit -i -d $CACHE_DIR/completion
+
 zstyle ':completion:*' menu select
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
