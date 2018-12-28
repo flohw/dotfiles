@@ -1,0 +1,11 @@
+alias cp='nocorrect cp'
+alias gist='nocorrect gist'
+alias man='nocorrect man'
+alias mkdir='nocorrect mkdir'
+alias mv='nocorrect mv'
+alias sudo='nocorrect sudo'
+
+setopt correct_all
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
