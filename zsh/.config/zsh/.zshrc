@@ -6,7 +6,7 @@ function load_files_in() {
     done
 }
 
-[[ -d $ZDOTDIR/configurations ]] && load_files_in configurations
+[[ -d $ZDOTDIR/lib ]] && load_files_in lib
 [[ -d $ZDOTDIR/functions ]] && load_files_in functions 
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
