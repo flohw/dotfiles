@@ -1,5 +1,6 @@
-HISTFILE=$ZDOTDIR/.zsh_history
+HISTFILE=$ZCACHEDIR/history
 HISTSIZE=10000
+SAVEHIST=$HISTSIZE
 HISTORY_IGNORE="&|[ ]*|exit|ls *|ll *|bg|fg|history" # Do not add these commands to history
 
 setopt hist_ignore_all_dups # Ignore duplicated commands
