@@ -1,7 +1,5 @@
 function load_files_in() {
-    if [ ! "$(ls -A $ZDOTDIR/$1/)" ]; then
-        return 0
-    fi
+    [[ ! "$(ls -A $ZDOTDIR/$1/)" ]] && return 1
     for f in $ZDOTDIR/$1/*; do
         [[ $f == *.zwc ]] && continue
         source $f
@@ -16,7 +14,6 @@ function load_files_in() {
 # Add hook to source .env file
 autoload -U add-zsh-hook compaudit compinit
 compinit -i -d $ZDOTDIR/cache/completion
-add-zsh-hook chpwd () { [[ -f .env ]] && source .env }
 
 setopt  autocd autopushd pushdignoredups # Autocd and features related to path travel
 
