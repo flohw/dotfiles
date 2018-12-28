@@ -14,11 +14,19 @@ Aliases are groued by program or theme.
 All usefull functions are listed in `functions/` directory. All files are sourced in zshrc file.
 Functions are groued by program or theme. They are designed to be kind of complex aliases
 
+## Lib
+
+All common configuration as style, completion, history, etc are placed in this directory
+
+## Plugins
+
+All external plugins configuration are placed in this directory. They can be installed via packages or as a git submodule.
+
 ## Improvements
 
 - [ ] Zsh theme management with powerline9k
 - [ ] Improve usage of compiled source files
-- [ ] Create variables to store cache dir and specific compiled files
-- [ ] Improve file structures with a `tools/` directory for example to store some global functions.
+- [x] Create variables to store cache dir and specific compiled files
+- [x] Improve file structures with a `tools/` directory for example to store some global functions.
     - git functions file should be placed in this directory such as `load_file_in` if possible
 
