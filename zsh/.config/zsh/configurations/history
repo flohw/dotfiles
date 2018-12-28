@@ -1,0 +1,12 @@
+HISTFILE=$ZDOTDIR/.zsh_history
+HISTSIZE=10000
+HISTORY_IGNORE="&|[ ]*|exit|ls *|ll *|bg|fg|history" # Do not add these commands to history
+
+setopt hist_ignore_all_dups # Ignore duplicated commands
+setopt hist_ignore_dups     # Ignore duplicated commands history list
+setopt inc_append_history   # Add commands to HISTFILE in order of execution
+setopt hist_verify          # Show command with history expansion to user before running it
+setopt histignorespace      # Ignore command starting with spaces
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
