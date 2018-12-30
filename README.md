@@ -13,8 +13,10 @@ stow --target $HOME --delete <package-name> -v
 
 ## Dependencies
 
-- [powerlevel9k](https://github.com/bhilburn/powerlevel9k) installed via pacman
+- [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
     - [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
+- [clipmenu](https://github.com/cdown/clipmenu)
+    - [xsel](https://github.com/kfish/xsel)
 
 ## Improvements
 
@@ -23,8 +25,8 @@ stow --target $HOME --delete <package-name> -v
 - [ ] Add i3 configuration
 - [ ] Add polybar configuration
 - [ ] Add dunst configuration
-- [ ] Add rofi configuration
-- [ ] Add greenclip configuration
+- [ ] Add rofi configuration ?
+- [x] Add greenclip configuration. Replaced by clipmenu
 - [ ] Add xorg related configuration
 - [ ] Add conky configuration
 - [ ] Improve installation of stow packages
