@@ -2,5 +2,3 @@
 #include ".Xresources.d/colors"
 #include ".Xresources.d/custom"
 
-# vim: filetype=xdefaults
-
