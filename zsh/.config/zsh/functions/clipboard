@@ -1,0 +1,27 @@
+function clipcopy() {
+  emulate -L zsh
+  local file=$1
+  if (( $+commands[xsel] )); then
+    if [[ -z $file ]]; then
+      xsel --input --clipboard
+    else
+      cat "$file" | xsel --input --clipboard
+    fi
+  else
+    print "clipcopy: xsel not installed" >&2
+    return 1
+  fi
+}
+
+function clippaste() {
+  emulate -L zsh
+  if (( $+commands[xsel] )); then
+    xsel --output --clipboard
+  else
+    print "clipcopy: xclip installed" >&2
+    return 1
+  fi
+}
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
