@@ -13,10 +13,12 @@ stow --target $HOME --delete <package-name> -v
 
 ## Dependencies
 
+- [arcticicestudio/nord](https://github.com/arcticicestudio/nord) for colors theme
 - [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
     - [NerdFonts](https://github.com/ryanoasis/nerd-fonts)
 - [clipmenu](https://github.com/cdown/clipmenu)
     - [xsel](https://github.com/kfish/xsel)
+- [xorg](https://cgit.freedesktop.org/xorg/xserver)
 
 ## Improvements
 
