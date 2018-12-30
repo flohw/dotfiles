@@ -26,6 +26,8 @@ All external plugins configuration are placed in this directory. They can be ins
 
 - [ ] Zsh theme management with powerline9k
 - [ ] Improve usage of compiled source files
+- [ ] Improve completion
+    - [ ] Directories are not completed
 - [x] Create variables to store cache dir and specific compiled files
 - [x] Improve file structures with a `tools/` directory for example to store some global functions.
     - git functions file should be placed in this directory such as `load_file_in` if possible
