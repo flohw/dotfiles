@@ -1,0 +1,25 @@
+*.foreground:   c04
+*.background:   c00
+*.cursorColor:  c04
+*fading: 35
+*fadeColor: c03
+
+*.color0: c01
+*.color1: c0B
+*.color2: c0E
+*.color3: c0D
+*.color4: c09
+*.color5: c0F
+*.color6: c08
+*.color7: c05
+*.color8: c03
+*.color9: c0B
+*.color10: c0E
+*.color11: c0D
+*.color12: c09
+*.color13: c0F
+*.color14: c07
+*.color15: c06
+
+# vim: filetype=xdefaults
+
