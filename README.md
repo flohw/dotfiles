@@ -25,8 +25,8 @@ stow --target $HOME --delete <package-name> -v
 
 - [ ] Add git configuration
 - [ ] Add vim configuration
-- [ ] Add i3 configuration
-- [ ] Add polybar configuration
+- [x] Add i3 configuration
+- [ ] Add polybar configuration ?
 - [ ] Add dunst configuration
 - [ ] Add rofi configuration ?
 - [x] Add greenclip configuration. Replaced by clipmenu
