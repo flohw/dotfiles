@@ -20,6 +20,7 @@ stow --target $HOME --delete <package-name> -v
 - [clipmenu](https://github.com/cdown/clipmenu): dmenu clipboard manager
     - [xsel](https://github.com/kfish/xsel)
 - [xorg](https://cgit.freedesktop.org/xorg/xserver)
+- [i3-wm](https://i3wm.org/)
 
 ## Improvements
 
