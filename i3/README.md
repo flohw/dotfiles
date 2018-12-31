@@ -5,6 +5,9 @@ All i3 configuration is splitted into multiple files in `.config/i3/file`. They 
 ## Improvements
 
 - [ ] Global configuration
+- [ ] Use Xresources to set fonts
+- [x] Variable file
+- [ ] Shortcuts file
 - [ ] i3 status
 - [ ] i3 blocks
 - [ ] i3 gaps
