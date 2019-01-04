@@ -1,7 +1,0 @@
-PLUGIN_FILE=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ $(tput colors) -lt 256 || ! -f $PLUGIN_FILE ]] && return 0
-
-source $PLUGIN_FILE
-
-# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
-

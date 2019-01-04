@@ -1,0 +1,18 @@
+declare -A plugins
+plugins=(
+    [zsh-syntax-highlighting]=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    [zsh-autosuggestions]=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+)
+
+for plugin file in ${(kv)plugins}; do
+    if [[ ! -f $file ]]; then
+        echo "$plugin is not installed, run sudo pacman -S $plugin to dismiss this message"
+    else
+        source $file
+    fi
+done
+
+unset plugins plugin file
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
