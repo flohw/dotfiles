@@ -1,6 +1,6 @@
 # ZSH Configuration
 
-Only `.zshenv` is stowed. It defines `$ZDOTDIR` to ease configuration in other files.
+Only `.zshenv` defines `$ZDOTDIR` to ease configuration in other files.
 
 All subsequent paths are base on `$ZDOTDIR` value.
 
@@ -20,14 +20,14 @@ All common configuration as style, completion, history, etc are placed in this d
 
 ## Plugins
 
-All external plugins configuration are placed in this directory. They can be installed via packages or as a git submodule.
+All external plugins configuration are placed in this directory. They should be installed via git submodule. All plugins loaded via packages must be placed in `lib/plugins` file
 
 ## Improvements
 
 - [ ] Zsh theme management with powerline9k
 - [ ] Improve usage of compiled source files
 - [ ] Improve completion
-    - [ ] Directories are not completed
+    - [ ] Directories are not or partially completed
 - [x] Create variables to store cache dir and specific compiled files
 - [x] Improve file structures with a `tools/` directory for example to store some global functions.
     - git functions file should be placed in this directory such as `load_file_in` if possible

@@ -10,3 +10,7 @@ Default .Xresources file loads different specific files located in .Xresources.d
 * `colors` file defines default and common colors based on theme colors
 * `custom` file defines custom resource values
 
+## Improvements
+
+- [ ] Add trensparency
+
