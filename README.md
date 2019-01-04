@@ -21,10 +21,12 @@ stow --target $HOME --delete <package-name> -v
     - [xsel](https://github.com/kfish/xsel)
 - [xorg](https://cgit.freedesktop.org/xorg/xserver)
 - [i3-wm](https://i3wm.org/)
+- [tmux](https://github.com/tmux/tmux)
 
 ## Improvements
 
 - [ ] Add git configuration
+- [ ] Add tmux configuration
 - [ ] Add vim configuration
 - [x] Add i3 configuration
 - [ ] Add polybar configuration ?
