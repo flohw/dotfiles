@@ -15,5 +15,12 @@ function load_files_in() {
 # export LESS="-F -X $LESS"
 # alias webdav="docker run --rm -d -e USERNAME=florian -e PASSWORD=lexik123 -p 888:80 -v /home/florian/Documents:/var/webdav morrisjobke/webdav"
 
+if [[ $DISPLAY ]]; then
+    [[ $- != *i* ]] && return 0
+    if [[ -z $TMUX ]]; then
+        exec tmux -2
+    fi
+fi
+
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
