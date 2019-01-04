@@ -1,4 +1,6 @@
-# i3 configuration
+# I3
+
+## Global configuration
 
 All i3 configuration is splitted into multiple files in `.config/i3/file`. They are compiled into `.config/i3/config` by pressing `<C-S-c>`. They must be compiled manually the first time with `make`.
 

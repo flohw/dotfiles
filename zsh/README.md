@@ -1,4 +1,6 @@
-# ZSH Configuration
+# ZSH
+
+## Global configuration
 
 Only `.zshenv` defines `$ZDOTDIR` to ease configuration in other files.
 
