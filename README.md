@@ -26,8 +26,9 @@ stow --target $HOME --delete <package-name> -v
 ## Improvements
 
 - [ ] Add a makefile and scripts to install
+    - [ ] Create a target to init a new package
 - [ ] Add git configuration
-- [ ] Add tmux configuration
+- [x] Add tmux configuration
 - [ ] Add vim configuration
 - [x] Add i3 configuration
 - [ ] Add polybar configuration ?
