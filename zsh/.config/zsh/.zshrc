@@ -16,7 +16,7 @@ function load_files_in() {
 # alias webdav="docker run --rm -d -e USERNAME=florian -e PASSWORD=lexik123 -p 888:80 -v /home/florian/Documents:/var/webdav morrisjobke/webdav"
 
 if [[ $DISPLAY ]]; then
-    [[ $- != *i* ]] && return 0
+    [[ $- != *i* || ! -x /usr/bin/tmux ]] && return 0
     if [[ -z $TMUX ]]; then
         exec tmux -2
     fi

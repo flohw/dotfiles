@@ -1,6 +1,7 @@
 # Do not load theme if terminal do not supports 256 colors
 THEME_FILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
+[[ ! -f $THEME_FILE ]] && echo "powerlevel9k is not installed, run sudo pacman -S zsh-theme-powerlevel9k" && return 0
 [[ $(tput colors) -lt 256 || ! -f $THEME_FILE ]] && return 0
 
 POWERLEVEL9K_MODE='nerdfont-complete'
