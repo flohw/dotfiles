@@ -2,8 +2,9 @@ set-option -g default-terminal $TERM
 set-option -g mode-keys vi
 set-option -g base-index 1
 
-bind-key s split-window -h
-bind-key v split-window -v
+bind-key V split-window -h
+bind-key H split-window -v
+bind-key r source-file $HOME/.tmux.conf
 
 bind-key -n M-F1  select-window -t:1
 bind-key -n M-F2  select-window -t:2
