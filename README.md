@@ -17,8 +17,7 @@ stow --target $HOME --delete <package-name> -v
 - [arcticicestudio/nord](https://github.com/arcticicestudio/nord): colors theme
 - [powerlevel9k](https://github.com/bhilburn/powerlevel9k): customizable zsh prompt
     - [NerdFonts](https://github.com/ryanoasis/nerd-fonts): font used by powerleve9k
-- [clipmenu](https://github.com/cdown/clipmenu): dmenu clipboard manager
-    - [xsel](https://github.com/kfish/xsel)
+- [xsel](https://github.com/kfish/xsel)
 - [xorg](https://cgit.freedesktop.org/xorg/xserver)
 - [i3-wm](https://i3wm.org/)
 - [tmux](https://github.com/tmux/tmux)
