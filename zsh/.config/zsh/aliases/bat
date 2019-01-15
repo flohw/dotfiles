@@ -1,4 +1,4 @@
-[[ ! -x /usr/bin/bat ]] && return
+[[ ! -x /usr/bin/bat ]] && echo "bat is not installed, run sudo pacman -S bat" && return 0
 
 alias cat='bat --color always --style auto'
 
