@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Download latest nerdfont cheatsheet and extract unicode value with description text
+curl https://nerdfonts.com/ > nerdfonts-html
+cat nerdfonts-html | grep "\"codepoint\"" | sed 's/.*nf-[[:alpha:]]\+-\([[:alnum:]_]\+\).*\([[:xdigit:]]\{4\}\).*/\\u\2 \1/' > nerdfonts-light
+
+# Parse each line to get the unicode char with description to be searchable
+while IFS='' read -r line  || [[ -n $line ]]; do
+    char=`echo $line|cut -d' ' -f1`
+    description=`echo $line|cut -d' ' -f2`
+    echo -e $char $description >> ../resources/nerdfonts
+done < nerdfonts-light
+
+# Cleanup
+rm nerdfonts-html nerdfonts-light
+
+# vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
+
