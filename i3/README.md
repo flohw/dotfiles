@@ -9,6 +9,7 @@ Scripts are placed in `scripts` directory. All resources required by configuraio
 
 - [ ] Improve first setup by compiling resources
 - [ ] Try to use local font for nerdfonts-dmenu instead of building a resource file
+- [ ] Refactor dmenu and update scripts as they are very similar
 - [ ] Global configuration
 - [ ] Use Xresources to set fonts
 - [x] Variable file
