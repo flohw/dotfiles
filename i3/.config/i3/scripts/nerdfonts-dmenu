@@ -1,11 +1,12 @@
 #!/bin/bash
 
+resource=$HOME/.config/i3/resources/nerdfonts
 # Exit if xsel is not installed or nerfont file does not exist
 xsel -h > /dev/null || exit
-[[ ! -f $HOME/.config/i3/resources/nerdfonts ]] && exit
+[[ ! -f $resource ]] && exit
 
 # Open dmenu with the list of searchable icons
-menuitem=$(cat $HOME/.config/i3/resources/nerdfonts|dmenu -i -l 20)
+menuitem=$(cat $resource | dmenu -i -l 20)
 [[ -z $menuitem ]] && exit # Exit if nothing has been selected
 # Get only the unicode character and add it to clipboard
 icon=$(echo $menuitem | sed 's/ .*//')
