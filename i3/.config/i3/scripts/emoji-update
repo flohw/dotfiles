@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+resource=$HOME/.config/i3/resources/emoji
+[[ -f $resource ]] && mv $resource $resource.old
+
+curl -s https://en.wikipedia.org/wiki/Emoji > emoji
+cat emoji | grep '"U+[a-fA-F0-9]\{4,5\}' | sed 's#<td title="U+\([[:xdigit:]]\{4,5\}\): \([[:alnum:][:space:]-]*\)">.*#\1 \2#' > emoji-light
+
+while IFS='' read -r line || [[ -n $line ]]; do
+    char=\\U$(echo $line|cut -d' ' -f1)
+    description=$(echo $line| tr -d "\n" |cut -d' ' -f 2-)
+    printf "%b $description\n" $char >> $resource
+done < emoji-light
+rm emoji emoji-light
+
+[[ -f $resource.old ]] && rm $resource.old
+
+# vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
+
