@@ -1,0 +1,16 @@
+#!/bin/bash
+
+resource=$HOME/.config/i3/resources/emoji
+# Exit if xsel is not installed or update emoji file if it does not exist
+xsel -h > /dev/null || exit
+[[ ! -f $resource ]] && $HOME/.config/i3/scripts/emoji-update
+
+# Open dmenu with the list of searchable icons
+menuitem=$(cat $resource | dmenu -i -l 20)
+[[ -z $menuitem ]] && exit # Exit if nothing has been selected
+# Get only the unicode character and add it to clipboard
+icon=$(echo $menuitem | sed 's/ .*//')
+echo $icon | tr -d '\n' | xsel --input --clipboard
+
+# vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
+
