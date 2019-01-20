@@ -3,7 +3,7 @@
 resource=$HOME/.config/i3/resources/nerdfonts
 # Exit if xsel is not installed or nerfont file does not exist
 xsel -h > /dev/null || exit
-[[ ! -f $resource ]] && exit
+[[ ! -f $resource ]] && $HOME/.config/i3/scripts/nerdfonts-update
 
 # Open dmenu with the list of searchable icons
 menuitem=$(cat $resource | dmenu -i -l 20)
