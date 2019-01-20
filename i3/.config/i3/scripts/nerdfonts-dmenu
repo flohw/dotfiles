@@ -1,7 +1,7 @@
 #!/bin/bash
 
 resource=$HOME/.config/i3/resources/nerdfonts
-# Exit if xsel is not installed or nerfont file does not exist
+# Exit if xsel is not installed or update nerdfont file if it does not exist
 xsel -h > /dev/null || exit
 [[ ! -f $resource ]] && $HOME/.config/i3/scripts/nerdfonts-update
 
