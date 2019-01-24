@@ -21,6 +21,7 @@ stow --target $HOME --delete <package-name> -v
 - [xorg](https://cgit.freedesktop.org/xorg/xserver)
 - [i3-wm](https://i3wm.org/)
 - [tmux](https://github.com/tmux/tmux)
+- [vifm](https://github.com/vifm/vifm)
 
 ## Improvements
 
