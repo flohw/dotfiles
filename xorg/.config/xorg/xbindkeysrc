@@ -1,0 +1,20 @@
+# Increase backlight
+"xbacklight -inc 5"
+  XF86MonBrightnessUp
+
+# Decrease backlight
+"(( `echo "$(xbacklight -get) <= 5" | bc` )) && xbacklight -set 1 || xbacklight -dec 5"
+  XF86MonBrightnessDown
+
+# Toggle volume
+"amixer -q set Master toggle"
+  XF86AudioMute
+
+# Increase volume
+"amixer -q set Master 5%+"
+  XF86AudioRaiseVolume
+
+# Decrease volume
+"amixer -q set Master 5%-"
+  XF86AudioLowerVolume
+
