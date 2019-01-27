@@ -1,20 +1,20 @@
 # Increase backlight
-"xbacklight -inc 5"
+"xbacklight -inc 5 && pkill -RTMIN+15 i3blocks"
   XF86MonBrightnessUp
 
 # Decrease backlight
-"(( `echo "$(xbacklight -get) <= 5" | bc` )) && xbacklight -set 1 || xbacklight -dec 5"
+"(( `echo "$(xbacklight -get) <= 5" | bc` )) && xbacklight -set 1 || xbacklight -dec 5 && pkill -RTMIN+15 i3blocks"
   XF86MonBrightnessDown
 
 # Toggle volume
-"amixer -q set Master toggle"
+"amixer -q set Master toggle && pkill -RTMIN+10 i3blocks"
   XF86AudioMute
 
 # Increase volume
-"amixer -q set Master 5%+"
+"amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks"
   XF86AudioRaiseVolume
 
 # Decrease volume
-"amixer -q set Master 5%-"
+"amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks"
   XF86AudioLowerVolume
 
