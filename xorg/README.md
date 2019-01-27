@@ -13,13 +13,15 @@ Default `xresources` file loads different specific files located in `xresources.
 
 ## Xmodmap
 
-`xmodmap` define some mapping for keyboard. It currently only swaps alt and control keys
+`xmodmap` define some mapping for keyboard. It currently only swaps alt and control keys.
 
 ## Xbindkeysrc
 
 `xbindkeysrc` define some keybinding to actions as sound management and backlight supports.
+They can also trigger signals in order to update i3blocks
 
 ## Improvements
 
 - [ ] Add trensparency
+- [ ] Configure more `$XDG` variables
 
