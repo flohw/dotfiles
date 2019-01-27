@@ -44,7 +44,7 @@ unbind-key C-Down
 unbind-key C-Up
 unbind-key C-Right
 
-run-shell $HOME/.config/tmux/themes/nord-tmux/nord.tmux
+run-shell $XDG_CONFIG_HOME/tmux/themes/nord/nord.tmux
 
 # vim: syntax=tmux tabstop=4 shiftwidth=4 expandtab
 
