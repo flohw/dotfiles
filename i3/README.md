@@ -14,8 +14,7 @@ Scripts are placed in `scripts` directory. All resources required by configuraio
 - [ ] Use Xresources to set fonts
 - [x] Variable file
 - [ ] Shortcuts file
-- [ ] i3 status
-- [ ] i3 blocks
+- [x] i3 blocks
 - [ ] i3 gaps
 - [ ] Changing background
 - [ ] Scripts
