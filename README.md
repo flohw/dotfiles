@@ -17,12 +17,16 @@ stow --target $HOME --delete <package-name> -v
 - [arcticicestudio/nord](https://github.com/arcticicestudio/nord): colors theme
 - [powerlevel9k](https://github.com/bhilburn/powerlevel9k): customizable zsh prompt
     - [NerdFonts](https://github.com/ryanoasis/nerd-fonts): font used by powerleve9k
-- [xsel](https://github.com/kfish/xsel): copy/past for X
 - [xorg](https://cgit.freedesktop.org/xorg/xserver): In order to display graphics
+    - [xsel](https://github.com/kfish/xsel): copy/past for X
+    - xorg-backlight
 - [i3-wm](https://i3wm.org/): Window manager
     - [i3blocks](https://github.com/vivien/i3blocks): Configure some blocks to place in i3 bar
+    - [i3status](https://i3wm.org/i3status/manpage.html): Status bar for i3
 - [tmux](https://github.com/tmux/tmux): Split terminal in panes, multiple window and sessions.
 - [vifm](https://github.com/vifm/vifm): Text editor
+- [stow](https://www.gnu.org/software/stow/): Symlink farm manager
+- [git](https://github.com/git/git): Versionning management
 
 ## Improvements
 
@@ -34,9 +38,12 @@ stow --target $HOME --delete <package-name> -v
 - [x] Add i3 configuration
 - [ ] Add wallpapers
     - [ ] Download wallpapers automatically
+    - [ ] Service to change wallpaper automatically
 - [x] Add dunst configuration
+    - [ ] Service to start dunst on startup
 - [ ] Add xorg related configuration
     - [x] homedir configuration
+    - [ ] Add transparency with compton or xcompmgr
     - [ ] global configuration in `/etc`
 - [ ] Add conky configuration
 - [ ] Improve installation of stow packages
