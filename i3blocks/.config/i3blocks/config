@@ -1,5 +1,5 @@
 # Global properties
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=$XDG_CONFIG_HOME/i3blocks/blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -11,7 +11,6 @@ interval=once
 signal=10
 
 [brightness]
-command=$XDG_CONFIG_HOME/i3blocks/blocks/brightness
 label=💡
 interval=once
 signal=15
