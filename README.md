@@ -34,7 +34,7 @@ stow --target $HOME --delete <package-name> -v
 - [x] Add i3 configuration
 - [ ] Add wallpapers
     - [ ] Download wallpapers automatically
-- [ ] Add dunst configuration
+- [x] Add dunst configuration
 - [ ] Add xorg related configuration
     - [x] homedir configuration
     - [ ] global configuration in `/etc`
