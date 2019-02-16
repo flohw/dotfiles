@@ -1,0 +1,12 @@
+jekyll() {
+    echo "Used port : ${PORT:=80}"
+    docker run --rm --interactive --tty \
+        --volume $PWD:/srv/jekyll \
+        --volume $PWD/vendor/bundle:/usr/local/bundle \
+        --publish ${PORT}:4000 \
+        jekyll/jekyll \
+        jekyll "$@"
+}
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+

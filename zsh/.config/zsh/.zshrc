@@ -10,6 +10,7 @@ function load_files_in() {
 [[ -d $ZDOTDIR/functions ]] && load_files_in functions 
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
+[[ -d $ZDOTDIR/docker ]] && load_files_in docker
 
 # source ~/.docker-exec
 # export LESS="-F -X $LESS"

@@ -1,0 +1,12 @@
+php() {
+    docker run --rm --interactive --tty \
+        --user $(id -u):$(id -g) \
+        --volume $PWD:/app \
+        --workdir /app \
+        --publish ${PORT:-80}:8000 \
+        php:${VERSION:-7.2-cli} \
+        php "$@"
+}
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
