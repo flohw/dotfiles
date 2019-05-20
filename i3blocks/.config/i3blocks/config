@@ -11,7 +11,7 @@ interval=once
 signal=10
 
 [brightness]
-label=💡
+label=ﯧ
 interval=once
 signal=15
 
@@ -24,6 +24,6 @@ interval=30
 # Date Time
 [time]
 command=date '+%Y-%m-%d %H:%M'
-label=🕘
+label=
 interval=60
 
