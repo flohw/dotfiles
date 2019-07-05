@@ -23,6 +23,7 @@ stow --target $HOME --delete <package-name> -v
 - [i3-wm](https://i3wm.org/): Window manager
     - [i3blocks](https://github.com/vivien/i3blocks): Configure some blocks to place in i3 bar
     - [i3status](https://i3wm.org/i3status/manpage.html): Status bar for i3
+    - [scrot](http://manpages.ubuntu.com/manpages/current/man1/scrot.1.html): SCRean shOT for lock screen
 - [tmux](https://github.com/tmux/tmux): Split terminal in panes, multiple window and sessions.
 - [vifm](https://github.com/vifm/vifm): Text editor
 - [stow](https://www.gnu.org/software/stow/): Symlink farm manager
@@ -36,6 +37,7 @@ stow --target $HOME --delete <package-name> -v
 - [x] Add tmux configuration
 - [ ] Add vim configuration
 - [x] Add i3 configuration
+    - [ ] Add script to screen shot with scrot. As the ones do for emoji and unicode chars.
 - [ ] Add wallpapers
     - [ ] Download wallpapers automatically
     - [ ] Service to change wallpaper automatically
