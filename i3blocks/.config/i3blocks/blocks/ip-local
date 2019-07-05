@@ -1,0 +1,14 @@
+IP_ADDRESS=$(ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q')
+
+case $BLOCK_BUTTON in
+  3) echo -n $IP_ADDRESS | xsel --input --clipboard;
+esac
+
+if [ -n $IP_ADDRESS ]; then
+  echo "<span color='white'>$IP_ADDRESS</span>"
+  echo $IP_ADDRESS
+  echo ""
+fi
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
