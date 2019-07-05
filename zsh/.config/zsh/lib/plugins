@@ -1,7 +1,7 @@
 declare -A plugins
 plugins=(
-    [zsh-syntax-highlighting]=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    [zsh-autosuggestions]=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    zsh-syntax-highlighting ${ZDOTDIR}/deps/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    zsh-autosuggestions ${ZDOTDIR}/deps/zsh-autosuggestions/zsh-autosuggestions.zsh
 )
 
 for plugin file in ${(kv)plugins}; do
