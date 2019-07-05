@@ -1,0 +1,14 @@
+IP_PUBLIC=$(curl ipinfo.io/ip 2> /dev/null)
+
+case $BLOCK_BUTTON in
+  3) echo -n $IP_PUBLIC | xsel --input --clipboard;
+esac
+
+if [ -n $IP_PUBLIC ]; then
+  echo "<span color='white'>$IP_PUBLIC</span>"
+  echo $IP_PUBLIC
+  echo ""
+fi
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
