@@ -10,10 +10,10 @@ instance=Master
 interval=once
 signal=10
 
-[brightness]
-label=ﯧ
-interval=once
-signal=15
+# [brightness]
+# label=ﯧ
+# interval=once
+# signal=15
 
 # Battery indicator
 [battery]
