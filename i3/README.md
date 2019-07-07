@@ -11,12 +11,12 @@ Scripts are placed in `scripts` directory. All resources required by configuraio
 - [ ] Try to use local font for nerdfonts-dmenu instead of building a resource file
 - [ ] Refactor dmenu and update scripts as they are very similar
 - [ ] Global configuration
-- [ ] Use Xresources to set fonts
+- [x] Use Xresources to set fonts
 - [x] Variable file
 - [ ] Shortcuts file
 - [x] i3 blocks
 - [ ] i3 gaps
 - [ ] Changing background
 - [ ] Scripts
-    - [DisplaySelect](https://github.com/LukeSmithxyz/voidrice/blob/master/.scripts/i3cmds/displayselect)
+    - [DisplaySelect](https://github.com/LukeSmithxyz/voidrice/blob/master/.scripts/i3cmds/displayselect) might be placed in xbindkeysrc
 
