@@ -1,17 +1,11 @@
-*.nord00: c00
-*.nord01: c01
-*.nord02: c02
-*.nord03: c03
-*.nord04: c04
-*.nord05: c05
-*.nord06: c06
-*.nord07: c07
-*.nord08: c08
-*.nord09: c09
-*.nord0A: c0A
-*.nord0B: c0B
-*.nord0C: c0C
-*.nord0D: c0D
-*.nord0E: c0E
-*.nord0F: c0F
+*black:      black
+*grey:       grey
+*white:      white
+*greyDarker: greyDarker
 
+*red:        red
+*green:      green
+*yellow:     yellow
+*blue:       blue
+*magenta:    magenta
+*cyan:       cyan
