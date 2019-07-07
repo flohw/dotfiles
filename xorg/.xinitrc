@@ -4,5 +4,8 @@ if [ -d $XDG_CONFIG_HOME ]; then
     [[ -f $XDG_CONFIG_HOME/xorg/xbindkeysrc ]] && xbindkeys -f $XDG_CONFIG_HOME/xorg/xbindkeysrc
 fi
 
+numlockx &
 exec i3
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
