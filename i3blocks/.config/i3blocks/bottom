@@ -1,0 +1,16 @@
+# Global properties
+command=$XDG_CONFIG_HOME/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[ip-public]
+label=
+interval=10
+markup=pango
+color=#ff0000
+
+[ip-local]
+label=囹
+interval=10
+markup=pango
+color=#3971ed
