@@ -26,7 +26,7 @@ stow --target $HOME --delete <package-name> -v
     - [i3status](https://i3wm.org/i3status/manpage.html): Status bar for i3
     - [i3lock](https://i3wm.org/i3lock/): screen locker for i3
     - [imagemagick](https://imagemagick.org/index.php): Image manipulation for i3lock
-    - [scrot](http://manpages.ubuntu.com/manpages/current/man1/scrot.1.html): GNU SCRean shoT program
+    - [scrot](http://manpages.ubuntu.com/manpages/current/man1/scrot.1.html): GNU SCRean shOT program
 - [tmux](https://github.com/tmux/tmux): Split terminal in panes, multiple window and sessions.
 - [vifm](https://github.com/vifm/vifm): Text editor
 - [stow](https://www.gnu.org/software/stow/): Symlink farm manager
