@@ -8,3 +8,5 @@ fi
 numlockx &
 exec i3
 
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+

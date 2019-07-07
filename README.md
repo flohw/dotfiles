@@ -20,10 +20,13 @@ stow --target $HOME --delete <package-name> -v
 - [xorg](https://cgit.freedesktop.org/xorg/xserver): In order to display graphics
     - [xsel](https://github.com/kfish/xsel): copy/past for X
     - xorg-backlight
+    - [numlockx](http://manpages.ubuntu.com/manpages/current/en/man1/numlockx.1.html): Control the state of NumLock
 - [i3-wm](https://i3wm.org/): Window manager
     - [i3blocks](https://github.com/vivien/i3blocks): Configure some blocks to place in i3 bar
     - [i3status](https://i3wm.org/i3status/manpage.html): Status bar for i3
-    - [scrot](http://manpages.ubuntu.com/manpages/current/man1/scrot.1.html): SCRean shOT for lock screen
+    - [scrot](http://manpages.ubuntu.com/manpages/current/man1/scrot.1.html): GNU SCRean shOT program
+    - [i3lock](https://i3wm.org/i3lock/): screen locker for i3
+    - [imagemagick](https://imagemagick.org/index.php): Image manipulation for i3lock
 - [tmux](https://github.com/tmux/tmux): Split terminal in panes, multiple window and sessions.
 - [vifm](https://github.com/vifm/vifm): Text editor
 - [stow](https://www.gnu.org/software/stow/): Symlink farm manager

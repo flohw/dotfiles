@@ -8,24 +8,20 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        gksu pm-suspend
-        ;;
-    hibernate)
-        lock && dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Hibernate
-        /sbin/reboot
+        lock && systemctl suspend
         ;;
     reboot)
-        dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
         systemctl reboot
         ;;
     poweroff)
-        #dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
-        #/sbin/poweroff
         systemctl poweroff
         ;;
     *)
-        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        echo "Usage: $0 {lock|logout|suspend|reboot|poweroff}"
         exit 2
 esac
 
 exit 0
+
+# vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
+
