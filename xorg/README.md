@@ -3,6 +3,10 @@
 Only `.xinitrc` is required to be in homedir. Other related configuration goes in `$XDG_CONFIG_HOME/.config/xorg/`.
 ` $XDG_CONFIG_HOME` is exported from zsh configuration which is loaded before xinit.
 
+> **NOTE**
+> If a display manager (such as gdm, lightdm, kdm, etc) is used, this configuration won't work.
+> You need to uninstall it to make it work properly.
+
 ## Xresources
 
 Default `xresources` file loads different specific files located in `xresources.d` directory for default colors, theme colors etc.
