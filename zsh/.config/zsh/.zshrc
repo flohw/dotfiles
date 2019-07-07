@@ -1,3 +1,12 @@
+if [[ $DISPLAY ]]; then
+    [[ $- != *i* || ! -x /usr/bin/tmux ]] && return 0
+    if [[ -z $TMUX ]] && tmux has-session -t $USER 2> /dev/null; then
+        exec tmux -2 attach-session -t $USER
+    elif [[ -z $TMUX ]]; then
+        exec tmux -2 new-session -s $USER
+    fi
+fi
+
 function load_files_in() {
     [[ ! "$(ls -A $ZDOTDIR/$1/)" ]] && return 1
     for f in $ZDOTDIR/$1/*; do
@@ -15,15 +24,6 @@ function load_files_in() {
 # source ~/.docker-exec
 # export LESS="-F -X $LESS"
 # alias webdav="docker run --rm -d -e USERNAME=florian -e PASSWORD=lexik123 -p 888:80 -v /home/florian/Documents:/var/webdav morrisjobke/webdav"
-
-if [[ $DISPLAY ]]; then
-    [[ $- != *i* || ! -x /usr/bin/tmux ]] && return 0
-    if [[ -z $TMUX ]] && tmux has-session -t $USER 2> /dev/null; then
-        exec tmux -2 attach-session -t $USER
-    elif [[ -z $TMUX ]]; then
-        exec tmux -2 new-session -s $USER
-    fi
-fi
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
