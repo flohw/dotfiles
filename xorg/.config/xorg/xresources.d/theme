@@ -1,17 +1,11 @@
-#define c00 #2E3440
-#define c01 #3B4252
-#define c02 #434C5E
-#define c03 #4C566A
-#define c04 #D8DEE9
-#define c05 #E5E9F0
-#define c06 #ECEFF4
-#define c07 #8FBCBB
-#define c08 #88C0D0
-#define c09 #81A1C1
-#define c0A #5E81AC
-#define c0B #BF616A
-#define c0C #D08770
-#define c0D #EBCB8B
-#define c0E #A3BE8C
-#define c0F #B48EAD
+#define black      #1d1f21
+#define grey       #c5c8c6
+#define white      #ffffff
+#define greyDarker #969896
 
+#define red        #cc342b
+#define green      #198844
+#define yellow     #fba922
+#define blue       #3971ed
+#define magenta    #a36ac7
+#define cyan       #5DBCD2

@@ -1,23 +1,37 @@
-*.foreground:   c04
-*.background:   c00
-*.cursorColor:  c04
-*fading: 35
-*fadeColor: c03
+! special
+*.foreground:   grey
+*.background:   black
+*.cursorColor:  grey
 
-*.color0: c01
-*.color1: c0B
-*.color2: c0E
-*.color3: c0D
-*.color4: c09
-*.color5: c0F
-*.color6: c08
-*.color7: c05
-*.color8: c03
-*.color9: c0B
-*.color10: c0E
-*.color11: c0D
-*.color12: c09
-*.color13: c0F
-*.color14: c07
-*.color15: c06
+! black
+*.color0: black
+*.color8: greyDarker
+
+! red
+*.color1: red
+*.color9: red
+
+! green
+*.color2:  green
+*.color10: green
+
+! yellow
+*.color3:  yellow
+*.color11: yellow
+
+! blue
+*.color4:  blue
+*.color12: blue
+
+! magenta
+*.color5:  magenta
+*.color13: magenta
+
+! cyan
+*.color6:  cyan
+*.color14: cyan
+
+! white
+*.color7:  grey
+*.color15: white
 
