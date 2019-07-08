@@ -15,4 +15,4 @@
 	new = green bold
 	whitespace = red reverse
 [alias]
-	update = remove update --prune
+	update = remote update --prune
