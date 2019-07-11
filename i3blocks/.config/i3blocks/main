@@ -16,10 +16,10 @@ signal=10
 # signal=15
 
 # Battery indicator
-[battery]
-label=⚡
-instance=0
-interval=30
+# [battery]
+# label=⚡
+# instance=0
+# interval=30
 
 # Date Time
 [time]
