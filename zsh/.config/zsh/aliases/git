@@ -1,4 +1,7 @@
+#!/usr/bin/env zsh
+
 [[ ! -x /usr/bin/git ]] && echo "git is not installed, run sudo pacman -S git" && return 0
+
 alias ga='git add'
 alias gapa='git add --patch'
 alias gap='git apply'

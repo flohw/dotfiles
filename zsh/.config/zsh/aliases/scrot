@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+[[ ! -x /usr/bin/scrot ]] && echo "scrot is not installed, run sudo -S scrot" && return 0
+[[ ! -d $HOME/Images/Screenshots/ ]] && mkdir -p $HOME/Images/Screenshots/
+
+alias scrot='scrot $HOME/Images/Screenshots/%Y-%m-%d-%H%M%S.png'
