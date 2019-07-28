@@ -3,6 +3,8 @@ alias ll='ls -lH'
 
 alias tree='tree -C'
 
+alias lsblk='lsblk -o NAME,LABEL,SIZE,FSUSED,FSUSE%,FSAVAIL,MOUNTPOINT,FSTYPE'
+
 alias _='sudo'
 
 alias src="source $ZDOTDIR/.zshrc"
