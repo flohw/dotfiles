@@ -1,0 +1,8 @@
+spotdl() {
+    sudo docker run --rm --interactive --tty \
+        --volume $PWD:/music \
+        flohw/spotdl "$@"
+}
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
+
