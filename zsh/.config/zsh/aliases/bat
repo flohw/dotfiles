@@ -1,6 +1,7 @@
 [[ ! -x /usr/bin/bat ]] && echo "bat is not installed, run sudo pacman -S bat" && return 0
 
 alias cat='bat --color always --style auto'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # vim:syntax=zsh
 
