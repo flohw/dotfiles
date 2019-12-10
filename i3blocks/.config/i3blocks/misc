@@ -7,10 +7,8 @@ markup=none
 label=
 interval=10
 markup=pango
-color=#ff0000
 
 [ip-local]
 label=囹
 interval=10
 markup=pango
-color=#3971ed

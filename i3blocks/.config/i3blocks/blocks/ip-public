@@ -5,14 +5,13 @@ case $BLOCK_BUTTON in
 esac
 
 if [[ -n $IP_PUBLIC ]]; then
-  echo "<span color='white'>$IP_PUBLIC</span>"
+  echo "<span color='white'> $IP_PUBLIC</span>"
   echo $IP_PUBLIC
-  echo ""
 else
-  echo "<span color='magenta'>NO NETWORK</span>"
+  echo "<span color='magenta'> NO NETWORK</span>"
   echo "NO NETWORK"
-  echo ""
 fi
+echo "#3971ed"
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
