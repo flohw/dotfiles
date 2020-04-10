@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+case $BLOCK_BUTTON in
+	1) $TERMINAL -t "System update" -T "System update" \
+		-e bash -c "echo 'These packages will be updated' && yay -Qu|more && yay -Syu && read -n1 -srp $'\nUpdate completed. Press any key to continue...'";;
+	2) notify-send "$(/usr/bin/yay -Qu)" ;;
+	3) pgrep -x dunst > /dev/null && notify-send "Upgrade module" "📦: number of upgradable packages
+- Left click to upgrade packages
+- Middle click to show upgradable packages" ;;
+esac
+
+echo "<span color='white'>$(yay -Qu | grep -v "\[ignored\]" | wc -l)</span>"
+echo ''
+echo '#fba922'

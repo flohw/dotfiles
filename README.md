@@ -20,6 +20,7 @@ stow --target $HOME --delete <package-name> -v
 - [xorg](https://cgit.freedesktop.org/xorg/xserver): In order to display graphics
     - [xsel](https://github.com/kfish/xsel): copy/past for X
     - xorg-backlight
+    - xbindkeys
     - [numlockx](http://manpages.ubuntu.com/manpages/current/en/man1/numlockx.1.html): Control the state of NumLock
 - [i3-wm](https://i3wm.org/): Window manager
     - [i3blocks](https://github.com/vivien/i3blocks): Configure some blocks to place in i3 bar
