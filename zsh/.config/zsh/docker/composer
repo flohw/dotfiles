@@ -1,5 +1,5 @@
 composer() {
-    sudo docker run --rm --interactive --tty \
+    docker run --rm --interactive --tty \
         --user $(id -u):$(id -g) \
         --volume /etc/passwd:/etc/passwd:ro \
         --volume /etc/group:/etc/group:ro \

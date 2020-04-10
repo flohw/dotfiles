@@ -1,5 +1,5 @@
 spotdl() {
-    sudo docker run --rm --interactive --tty \
+    docker run --rm --interactive --tty \
         --volume $PWD:/music \
         flohw/spotdl "$@"
 }
