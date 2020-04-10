@@ -1,5 +1,5 @@
 php() {
-    sudo docker run --rm --interactive --tty \
+    docker run --rm --interactive --tty \
         --user $(id -u):$(id -g) \
         --volume $PWD:/app \
         --workdir /app \

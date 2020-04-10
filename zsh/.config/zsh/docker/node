@@ -1,10 +1,10 @@
-yarn() {
+node() {
     docker run --rm --interactive --tty \
         --user $(id -u):$(id -g) \
         --volume $PWD:/app \
         --workdir /app \
         --publish ${PORT:-3000}:3000 \
-        node yarn "$@"
+        node:alpine "$@"
 }
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
