@@ -3,6 +3,12 @@ command=$XDG_CONFIG_HOME/i3blocks/blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[packages]
+label=📦 
+interval=once
+signal=8
+markup=pango
+
 [ip-public]
 label=
 interval=10
