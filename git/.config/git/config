@@ -16,3 +16,5 @@
 	whitespace = red reverse
 [alias]
 	update = remote update --prune
+[pull]
+	rebase = true
