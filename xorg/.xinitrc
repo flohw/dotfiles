@@ -5,9 +5,9 @@ if [ -d $XDG_CONFIG_HOME ]; then
 fi
 
 numlockx &
-exec picom &
-exec dunst &
-exec i3
+pidof picom > /dev/null || picom &
+pidof dunst > /dev/null || dunst &
+pidof i3 > /dev/null || exec i3
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 
