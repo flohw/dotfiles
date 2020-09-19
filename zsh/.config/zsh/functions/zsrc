@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+function zsrc() {
+    [[ -n $SHELL ]] && exec ${SHELL#-} || exec zsh
+}
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
