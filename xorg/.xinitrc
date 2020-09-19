@@ -6,6 +6,7 @@ fi
 
 numlockx &
 exec picom &
+exec dunst &
 exec i3
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab

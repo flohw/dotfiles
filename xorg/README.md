@@ -22,6 +22,6 @@ They can also trigger signals in order to update i3blocks
 
 ## Improvements
 
-- [ ] Add trensparency
+- [x] Add trensparency
 - [ ] Configure more `$XDG` variables
 
