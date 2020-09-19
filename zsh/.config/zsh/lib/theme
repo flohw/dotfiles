@@ -1,15 +1,18 @@
-# Do not load theme if terminal do not supports 256 colors
-THEME_FILE=${ZDOTDIR}/deps/powerlevel9k/powerlevel9k.zsh-theme
+THEME_FILE=${ZDOTDIR}/deps/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f $THEME_FILE ]] \
+ && echo "powerlevel10k is not installed, run \`git submodule init && git submodule update\` to dismiss this message" \
+ && return 0
 
-[[ ! -f $THEME_FILE ]] && echo "powerlevel9k is not installed, run \`git submodule init && git submodule update\`" && return 0
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 [[ $(tput colors) -lt 256 || ! -f $THEME_FILE ]] && return 0
 
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status background_jobs history)
-POWERLEVEL9K_OK_ICON=$'\UF00C '
-
 source $THEME_FILE
+[[ ! -f ${ZDOTDIR}/.p10k.zsh ]] || source ${ZDOTDIR}/.p10k.zsh
+ZLE_RPROMPT_INDENT=0
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
-
