@@ -7,3 +7,6 @@
 [submodule "zsh/.config/zsh/deps/zsh-autosuggestions"]
 	path = zsh/.config/zsh/deps/zsh-autosuggestions
 	url = git@github.com:zsh-users/zsh-autosuggestions
+[submodule "zsh/.config/zsh/deps/powerlevel10k"]
+	path = zsh/.config/zsh/deps/powerlevel10k
+	url = git@github.com:romkatv/powerlevel10k.git
