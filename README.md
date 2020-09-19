@@ -22,6 +22,8 @@ stow --target $HOME --delete <package-name> -v
     - xorg-backlight
     - xbindkeys
     - [numlockx](http://manpages.ubuntu.com/manpages/current/en/man1/numlockx.1.html): Control the state of NumLock
+    - [picom](https://github.com/yshui/picom)
+    - [dunst](https://dunst-project.org/)
 - [i3-wm](https://i3wm.org/): Window manager
     - [i3blocks](https://github.com/vivien/i3blocks): Configure some blocks to place in i3 bar
     - [i3status](https://i3wm.org/i3status/manpage.html): Status bar for i3
@@ -29,13 +31,12 @@ stow --target $HOME --delete <package-name> -v
     - [imagemagick](https://imagemagick.org/index.php): Image manipulation for i3lock
     - [scrot](http://manpages.ubuntu.com/manpages/current/man1/scrot.1.html): GNU SCRean shOT program
 - [tmux](https://github.com/tmux/tmux): Split terminal in panes, multiple window and sessions.
-- [vifm](https://github.com/vifm/vifm): Text editor
 - [stow](https://www.gnu.org/software/stow/): Symlink farm manager
 - [git](https://github.com/git/git): Versionning management
 
 ## Improvements
 
-- [ ] Add a makefile and scripts to install
+- [ ] Add a makefile or scripts to install
     - [ ] Create a target to init a new package
 - [ ] Add git configuration
 - [x] Add tmux configuration
@@ -45,10 +46,10 @@ stow --target $HOME --delete <package-name> -v
     - [ ] Download wallpapers automatically
     - [ ] Service to change wallpaper automatically
 - [x] Add dunst configuration
-    - [ ] Service to start dunst on startup
+    - [x] Service to start dunst on startup
 - [ ] Add xorg related configuration
     - [x] homedir configuration
-    - [ ] Add transparency with compton or xcompmgr
+    - [x] Add transparency with picom
     - [ ] global configuration in `/etc`
 - [ ] Add conky configuration
 - [ ] Improve installation of stow packages
