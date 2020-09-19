@@ -10,11 +10,6 @@ instance=Master
 interval=once
 signal=10
 
-[brightness]
-label=ﯧ
-interval=once
-signal=15
-
 # Battery indicator
 [battery]
 label=⚡
@@ -23,7 +18,7 @@ interval=30
 
 # Date Time
 [time]
-command=date '+%Y-%m-%d %H:%M'
+command=date '+ %Y-%m-%d %H:%M'
 label=
 interval=60
 
