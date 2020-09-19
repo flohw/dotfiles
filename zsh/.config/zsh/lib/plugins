@@ -6,7 +6,7 @@ plugins=(
 
 for plugin file in ${(kv)plugins}; do
     if [[ ! -f $file ]]; then
-        echo "$plugin is not installed, run sudo pacman -S $plugin to dismiss this message"
+        echo "$plugin is not installed, run \`git submodule init && git submodule update\` to dismiss this message"
     else
         source $file
     fi
