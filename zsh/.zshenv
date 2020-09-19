@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 ZDOTDIR=$HOME/.config/zsh
 ZCACHEDIR=$HOME/.cache/zsh
 [[ ! -d $ZCACHEDIR ]] && mkdir -p $ZCACHEDIR

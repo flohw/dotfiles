@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 HISTFILE=$ZCACHEDIR/history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE

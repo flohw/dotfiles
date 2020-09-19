@@ -22,12 +22,11 @@ All common configuration as style, completion, history, etc are placed in this d
 
 ## Plugins
 
-All external plugins configuration are placed in this directory. They should be installed via git submodule. All plugins loaded via packages must be placed in `lib/plugins` file
+All external plugins configuration are placed in this directory. They should be installed via git submodule.
+All plugins loaded via packages must be placed in `lib/plugins` file.
 
 ## Improvements
 
-- [ ] Zsh theme management with powerline9k
-- [ ] Improve usage of compiled source files
 - [ ] Improve completion
     - [ ] Directories are not or partially completed
 - [x] Create variables to store cache dir and specific compiled files

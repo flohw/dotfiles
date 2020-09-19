@@ -5,4 +5,3 @@ alias -g G='|grep'
 alias -g T='|tail'
 
 # vim:syntax=zsh
-

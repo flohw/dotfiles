@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 declare -A plugins
 plugins=(
     zsh-syntax-highlighting ${ZDOTDIR}/deps/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

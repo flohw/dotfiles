@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 composer() {
     docker run --rm --interactive --tty \
         --user $(id -u):$(id -g) \

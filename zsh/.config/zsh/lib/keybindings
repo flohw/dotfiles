@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Run zkbd if config file for $TERM is not fond
 # Rename file from zkbd format to custom
 # return 1 to prevent next lines to be executer

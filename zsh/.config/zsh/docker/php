@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 php() {
     docker run --rm --interactive --tty \
         --user $(id -u):$(id -g) \

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 sudo-command-line() {
     [[ -z $BUFFER ]] && zle up-history
     if [[ $BUFFER == sudo\ * ]]; then

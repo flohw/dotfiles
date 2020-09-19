@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 if [[ $DISPLAY ]]; then
     [[ $- != *i* || ! -x /usr/bin/tmux ]] && return 0
     if [[ -z $TMUX ]] && tmux has-session -t $USER 2> /dev/null; then

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 spotdl() {
     docker run --rm --interactive --tty \
         --volume $PWD:/music \

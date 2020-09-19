@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 alias cp='nocorrect cp'
 alias gist='nocorrect gist'
 alias man='nocorrect man'

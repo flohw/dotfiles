@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 jekyll() {
     echo "Used port : ${PORT:=80}"
     docker run --rm --interactive --tty \

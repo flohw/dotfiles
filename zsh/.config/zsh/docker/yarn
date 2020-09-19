@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 yarn() {
     docker run --rm --interactive --tty \
         --user $(id -u):$(id -g) \

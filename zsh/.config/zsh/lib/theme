@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 THEME_FILE=${ZDOTDIR}/deps/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f $THEME_FILE ]] \
  && echo "powerlevel10k is not installed, run \`git submodule init && git submodule update\` to dismiss this message" \
