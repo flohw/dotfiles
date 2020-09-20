@@ -42,9 +42,9 @@ stow --target $HOME --delete <package-name> -v
 - [x] Add tmux configuration
 - [ ] Add vim configuration
 - [x] Add i3 configuration
-- [ ] Add wallpapers
+- [x] Add wallpapers
     - [ ] Download wallpapers automatically
-    - [ ] Service to change wallpaper automatically
+    - [x] Service to change wallpaper automatically
 - [x] Add dunst configuration
     - [x] Service to start dunst on startup
 - [ ] Add xorg related configuration

@@ -7,3 +7,6 @@
 [submodule "zsh/.config/zsh/deps/powerlevel10k"]
 	path = zsh/.config/zsh/deps/powerlevel10k
 	url = git@github.com:romkatv/powerlevel10k.git
+[submodule "systemd/.local/share/wallpapers"]
+	path = systemd/.local/share/wallpapers
+	url = git@github.com:flohw/wallpapers
