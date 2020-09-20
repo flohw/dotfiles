@@ -1,0 +1,6 @@
+[Service]
+StandardOutput=journal
+ExecStart=/usr/bin/picom
+Environment=DISPLAY=:0
+[Install]
+WantedBy=default.target
