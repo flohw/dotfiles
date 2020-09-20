@@ -36,7 +36,6 @@
   )
 
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-    history                 # history number
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
@@ -312,14 +311,6 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   # Duration format: 1d 2h 3m 4s.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
-
-  ##########################[ history: history number of the command ]##########################
-  function prompt_history() {
-    p10k segment -f 8 -i ' ' -t '%h'
-  }
-  function instant_prompt_history() {
-    prompt_history
-  }
 
   # Transient prompt works similarly to the builtin transient_rprompt option. It trims down prompt
   # when accepting a command line. Supported values:
