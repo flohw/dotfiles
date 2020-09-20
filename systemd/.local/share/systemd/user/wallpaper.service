@@ -1,0 +1,4 @@
+[Service]
+Environment=WALLPAPER_DIR="%h/.local/share/wallpapers/"
+Environment=DISPLAY=:0
+ExecStart=/bin/sh -c 'feh --bg-fill $WALLPAPER_DIR`ls $WALLPAPER_DIR | sort -R | head -n 1`'
