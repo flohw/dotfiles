@@ -37,6 +37,7 @@ stow --target $HOME --delete <package-name> -v
 ## Improvements
 
 - [ ] Add a makefile or scripts to install
+    - [ ] Copy `zsh/.config/zsh/environment/environment.dist` to `zsh/.config/zsh/environment/environment`. **WARNING** This action is manually required.
     - [ ] Create a target to init a new package
 - [ ] Add git configuration
 - [x] Add tmux configuration

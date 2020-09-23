@@ -27,6 +27,7 @@ All plugins loaded via packages must be placed in `lib/plugins` file.
 
 ## Improvements
 
+- [ ] Make a script to copy `environment.dist` file
 - [ ] Improve completion
     - [ ] Directories are not or partially completed
 - [x] Create variables to store cache dir and specific compiled files
