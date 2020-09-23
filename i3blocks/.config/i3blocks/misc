@@ -9,6 +9,10 @@ interval=once
 signal=8
 markup=pango
 
+[github]
+label=
+interval=900 # 15 minutes
+
 [ip-public]
 label=
 interval=10

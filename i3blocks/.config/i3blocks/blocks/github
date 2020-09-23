@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+[[ ! -f /usr/bin/jq ]] && notify-send -u critical "[i3blocks] Github" "jq is not installed" && exit
+[[ -z $GH_TOKEN ]] && notify-send -u critical "[i3blocks] Github" "GH_TOKEN is not defined" && exit
+
+echo "  $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length)"
