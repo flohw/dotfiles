@@ -9,6 +9,6 @@ case $BLOCK_BUTTON in
 - Middle click to show upgradable packages" ;;
 esac
 
-echo "<span color='white'>$(yay -Qu | grep -v "\[ignored\]" | wc -l)</span>"
+echo "  <span color='white'>$(yay -Qu | grep -v "\[ignored\]" | wc -l)</span>"
 echo ''
 echo '#fba922'
