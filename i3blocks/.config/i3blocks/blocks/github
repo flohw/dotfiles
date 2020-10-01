@@ -3,4 +3,8 @@
 [[ ! -f /usr/bin/jq ]] && notify-send -u critical "[i3blocks] Github" "jq is not installed" && exit
 [[ -z $GH_TOKEN ]] && notify-send -u critical "[i3blocks] Github" "GH_TOKEN is not defined" && exit
 
+case $BLOCK_BUTTON in
+	1) firefox https://github.com/notifications
+esac
+
 echo "  $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length)"
