@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-alias ls='ls --color=auto'
+alias ls='ls --color=always'
 alias ll='ls -lH'
 
 alias tree='tree -C'
