@@ -7,6 +7,10 @@ export XDG_DATA_HOME=$HOME/.local/share
 export TERMINAL=/usr/local/bin/st
 LOCAL_BIN=$HOME/.local/bin
 export PATH=$PATH:$LOCAL_BIN
+export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store
+
+[[ ! -d $LOCAL_BIN ]] && mkdir -p $LOCAL_BIN
+unset LOCAL_BIN
 
 ### SECRET ENV ###
 export GH_TOKEN=
