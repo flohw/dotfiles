@@ -12,4 +12,4 @@ password=$(printf '%s\n' "${password_files[@]}" | dmenu "$@")
 [[ -n $password ]] || exit
 
 $TERMINAL -t "Password show" -T "Password show" \
-  -e bash -c "pass show \"$password\" 2>/dev/null && read -n1 -srp $'\nUpdate completed. Press any key to continue...'"
+  -e zsh -c "pass show \"$password\" 2>/dev/null && read -sk1"
