@@ -4,4 +4,4 @@ MAN=$(man -k . | sort | dmenu -l 10 | awk '{ print $2 " " $1 }' | tr -d '()')
 
 [[ -z $MAN ]] && exit
 
-st -e man -P "sh -c 'col -bx | bat -l man -p --paging always'" $MAN
+st -t Man -T Man -e man -P "$MANPAGER --paging always'" $MAN
