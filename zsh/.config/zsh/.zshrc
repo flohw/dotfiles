@@ -23,8 +23,4 @@ function load_files_in() {
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
 [[ -d $ZDOTDIR/docker ]] && load_files_in docker
 
-# source ~/.docker-exec
-# export LESS="-F -X $LESS"
-# alias webdav="docker run --rm -d -e USERNAME=florian -e PASSWORD=lexik123 -p 888:80 -v /home/florian/Documents:/var/webdav morrisjobke/webdav"
-
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
