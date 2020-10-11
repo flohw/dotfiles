@@ -1,9 +1,10 @@
 #!/bin/bash
 
-resource=$HOME/.config/i3/resources/nerdfonts
+mkdir -p $XDG_CACHE_HOME/i3
+resource=$XDG_CACHE_HOME/i3/nerdfonts
 
 # Download latest nerdfont cheatsheet and extract unicode value with description text
-curl https://nerdfonts.com/ > nerdfonts-html
+curl https://www.nerdfonts.com/cheat-sheet > nerdfonts-html
 cat nerdfonts-html | grep "\"codepoint\"" | sed 's/.*nf-\([[:alpha:]]\+\)-\([[:alnum:]_]\+\).*\([[:xdigit:]]\{4\}\).*/\\u\3 \1 \2/' > nerdfonts-light
 
 [[ -f $resource ]] && rm $resource
@@ -20,4 +21,3 @@ done < nerdfonts-light
 rm nerdfonts-html nerdfonts-light
 
 # vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
-

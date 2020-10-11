@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-resource=$HOME/.config/i3/resources/emoji
+mkdir -p $XDG_CACHE_HOME/i3
+resource=$XDG_CACHE_HOME/i3/emoji
 [[ -f $resource ]] && mv $resource $resource.old
 
 curl -s https://en.wikipedia.org/wiki/Emoji > emoji
@@ -16,4 +17,3 @@ rm emoji emoji-light
 [[ -f $resource.old ]] && rm $resource.old
 
 # vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
-

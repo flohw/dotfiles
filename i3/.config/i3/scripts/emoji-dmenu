@@ -1,6 +1,7 @@
 #!/bin/bash
 
-resource=$HOME/.config/i3/resources/emoji
+mkdir -p $XDG_CACHE_HOME/i3
+resource=$XDG_CACHE_HOME/i3/emoji
 # Exit if xsel is not installed or update emoji file if it does not exist
 xsel -h > /dev/null || exit
 [[ ! -f $resource ]] && $HOME/.config/i3/scripts/emoji-update
@@ -13,4 +14,3 @@ icon=$(echo $menuitem | sed 's/ .*//')
 echo $icon | tr -d '\n' | xsel --input --clipboard
 
 # vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
-

@@ -26,4 +26,3 @@ esac
 exit 0
 
 # vim:syntax=sh tabstop=4 shiftwidth=4 expandtab
-
