@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+shopt -s nullglob globstar
+
+prefix=${PASSWORD_STORE_DIR-~/.password-store}
+password_files=( "$prefix"/**/*.gpg )
+password_files=( "${password_files[@]#"$prefix"/}" )
+password_files=( "${password_files[@]%.gpg}" )
+
+password=$(printf '%s\n' "${password_files[@]}" | dmenu "$@")
+
+[[ -n $password ]] || exit
+
+$TERMINAL -t "Password show" -T "Password show" \
+  -e bash -c "pass show \"$password\" 2>/dev/null && read -n1 -srp $'\nUpdate completed. Press any key to continue...'"
