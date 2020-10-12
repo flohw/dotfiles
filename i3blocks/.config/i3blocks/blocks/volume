@@ -70,8 +70,6 @@ esac
 vol=$(volume|format)
 printf "% 4d%%\n" ${vol%\%*}
 printf "% 4d%%\n" ${vol%\%*}
-[[ ${vol%\%*} -gt 90 ]] && echo $(xrdb -query | grep color1 | cut -f2) # red
-[[ ${vol%\%*} -gt 80 ]] && echo $(xrdb -query | grep color3 | cut -f2) # orange
-[[ $vol -eq "MUTE" ]]   && echo ""                                     # normal
-echo $(xrdb -query | grep color2 | cut -f2) # green
-
+[[ ${vol%\%*} -ge 90 ]] && echo $(xrdb -query | grep color1 | cut -f2) # red
+[[ ${vol%\%*} -ge 80 && ${vol%\%*} -lt 90 ]] && echo $(xrdb -query | grep color3 | cut -f2) # orange
+[[ ${vol%\%*} -eq "MUTE" ]]  && echo ""
