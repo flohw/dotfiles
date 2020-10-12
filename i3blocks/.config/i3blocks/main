@@ -16,6 +16,11 @@ label=⚡
 instance=0
 interval=30
 
+[bluetooth]
+label=
+interval=once
+markup=pango
+
 # Date Time
 [time]
 command=date '+ %Y-%m-%d %H:%M'

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo " <span color='white'>"`bluetoothctl info | grep 'Name' | awk -F: '{ print $2 }'|xargs`"</span>"
+echo " <span color='white'>"`bluetoothctl info | grep 'Name' | awk -F: '{ print $2 }'|xargs`"</span>"
+echo "#3971ed"
