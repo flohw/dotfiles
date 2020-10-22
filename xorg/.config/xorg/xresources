@@ -1,4 +1,2 @@
 #include "xresources.d/theme"
 #include "xresources.d/colors"
-#include "xresources.d/custom"
-
