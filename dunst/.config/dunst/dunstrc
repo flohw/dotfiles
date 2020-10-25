@@ -29,21 +29,21 @@
 	close_all = ctrl+shift+space
 
 [urgency_low]
-	frame_color = "#3971ed"
-	foreground = "#3971ed"
-	background = "#191311"
+	frame_color = "#81A1C1"
+	foreground = "#81A1C1"
+	background = "#2E3440"
     timeout = 5
 
 [urgency_normal]
-	frame_color = "#198844"
-	foreground = "#198844"
-	background = "#191311"
+	frame_color = "#A3BE8C"
+	foreground = "#A3BE8C"
+	background = "#2E3440"
     timeout = 15
 
 [urgency_critical]
-	frame_color = "#cc342b"
-	foreground = "#cc342b"
-	background = "#191311"
+	frame_color = "#BF616A"
+	foreground = "#BF616A"
+	background = "#2E3440"
     timeout = 0
 
 # vim: syntax=conf tabstop=4 shiftwidth=4 expandtab
