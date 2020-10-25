@@ -6,19 +6,35 @@
 ! Repository: https://github.com/arcticicestudio/nord-xresources
 ! License:    MIT
 
-#define nord00 #2E3440 ! dark   black
-#define nord01 #3B4252 !        black
-#define nord02 #434C5E ! light  black
-#define nord03 #4C566A ! bright black
-#define nord04 #D8DEE9 !        grey
-#define nord05 #E5E9F0 !        white
-#define nord06 #ECEFF4 ! bright white
-#define nord07 #8FBCBB ! bright cyan
-#define nord08 #88C0D0 !        cyan
-#define nord09 #81A1C1 ! bright blue
-#define nord10 #5E81AC !        blue
-#define nord11 #BF616A !        red
-#define nord12 #D08770 ! bright red
-#define nord13 #EBCB8B !        yellow
-#define nord14 #A3BE8C !        green
-#define nord15 #B48EAD !        magenta
+! dark   black
+#define nord00 #2E3440
+!        black
+#define nord01 #3B4252
+! light  black
+#define nord02 #434C5E
+! bright black
+#define nord03 #4C566A
+!        grey
+#define nord04 #D8DEE9
+!        white
+#define nord05 #E5E9F0
+! bright white
+#define nord06 #ECEFF4
+! bright cyan
+#define nord07 #8FBCBB
+!        cyan
+#define nord08 #88C0D0
+! bright blue
+#define nord09 #81A1C1
+!        blue
+#define nord10 #5E81AC
+!        red
+#define nord11 #BF616A
+! bright red
+#define nord12 #D08770
+!        yellow
+#define nord13 #EBCB8B
+!        green
+#define nord14 #A3BE8C
+!        magenta
+#define nord15 #B48EAD
