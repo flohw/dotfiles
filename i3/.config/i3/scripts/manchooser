@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[[ -z $MANPAGER ]] && notify-send --urgency critical "Environment" "Environment variable \$MANPAGER is not defined" && exit -1
+
 MAN=$(man -k . | sort | dmenu -l 10 | awk '{ print $2 " " $1 }' | tr -d '()')
 
 [[ -z $MAN ]] && exit
