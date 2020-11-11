@@ -1,0 +1,6 @@
+#%PAM-1.0
+# Ask for u2f or unix password first present then allow sudo based on authentication
+auth            sufficient   pam_u2f.so cue
+auth            sufficient   pam_unix.so
+account         required     pam_unix.so
+session         required     pam_unix.so
