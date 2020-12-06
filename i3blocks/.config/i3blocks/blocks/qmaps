@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+case $button in
+  1) pgrep qmapshack > /dev/null || i3-msg -q exec qmapshack;;
+esac
+
+echo ' QMaps'
+echo ' '
+echo '#198844'

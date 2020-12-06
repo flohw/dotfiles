@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+case $button in
+  1) pgrep onboard > /dev/null || i3-msg -q exec onboard;;
+esac
+
+echo ' Onboard'
+echo ' Onboard'
+echo '#FFFFFF'

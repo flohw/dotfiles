@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+case $button in
+  1) pgrep vlc > /dev/null || i3-msg -q exec vlc;;
+esac
+
+echo ' VLC'
+echo ' VLC'
+echo '#e47b00'
