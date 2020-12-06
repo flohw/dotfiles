@@ -17,11 +17,6 @@ instance=0
 interval=30
 markup=pango
 
-[bluetooth]
-label=
-interval=once
-markup=pango
-
 # Date Time
 [time]
 command=echo " <span color='white'>"`date '+%Y-%m-%d %H:%M'`"</span>" && echo "<span color='white'>"`date '+%Y-%m-%d %H:%M'`"</span>" && echo '#198844'
