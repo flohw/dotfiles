@@ -8,9 +8,6 @@ keycode 133 = Control_L NoSymbol Control_L
 keycode 134 = Control_R NoSymbol Control_R
 keycode 37 = Super_L NoSymbol Super_L
 
-keycode 49 = less greater less greater bar brokenbar bar
-keycode 94 = at numbersign
-
 keycode 192 = XF86AudioPlay XF86AudioPause XF86AudioPlay XF86AudioPause
 keycode 191 = XF86AudioPrev NoSymbol XF86AudioPrev
 keycode 193 = XF86AudioNext NoSymbol XF86AudioNext
