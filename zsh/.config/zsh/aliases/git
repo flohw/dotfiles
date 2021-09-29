@@ -39,7 +39,8 @@ alias gpf!='git push --force'
 
 alias grh='git reset'
 alias grhh='git reset --hard'
-alias grup='git remote update ---prune'
+alias groh='git reset origin/$(git rev-parse --abbrev-ref HEAD) --hard'
+alias grup='git remote update --prune'
 
 alias gst='git status --short'
 alias gsb='git status --short --branch'
