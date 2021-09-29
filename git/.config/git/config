@@ -15,6 +15,6 @@
 	new = green bold
 	whitespace = red reverse
 [alias]
-	update = remote update --prune
+	current = "!git rev-parse --abbrev-ref HEAD"
 [pull]
 	rebase = true
