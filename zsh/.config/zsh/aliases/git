@@ -41,6 +41,7 @@ alias grh='git reset'
 alias grhh='git reset --hard'
 alias groh='git reset origin/$(git rev-parse --abbrev-ref HEAD) --hard'
 alias grup='git remote update --prune'
+alias grb='git rebase'
 
 alias gst='git status --short'
 alias gsb='git status --short --branch'
