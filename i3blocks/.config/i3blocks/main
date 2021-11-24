@@ -10,11 +10,11 @@ instance=Master
 interval=once
 signal=10
 
-# Battery indicator
-[battery]
+# Power statuses
+[upower-battery]
 label=⚡
-instance=0
-interval=30
+mac=BAT0
+interval=once
 markup=pango
 
 # Date Time

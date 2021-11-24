@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+upower_path=`upower -e|awk "/${mac//:/_}/"' {print $0}'`
+percentage=`upower -i $upower_path|awk '/percentage/ { print $2 }'|tr -d %`
+echo " $percentage%"
+echo " $percentage%"
+
+if [[ $percentage -lt 20 ]]; then
+  echo "#FF0000";
+elif [[ $percentage -lt 40 ]]; then
+  echo "#FFAE00";
+elif [[ $percentage -lt 60 ]]; then
+  echo "#FFF600";
+elif [[ $percentage -lt 85 ]]; then
+  echo "#A8FF00";
+fi
+
+# vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
