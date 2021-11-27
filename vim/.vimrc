@@ -23,3 +23,7 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
+" TextWidth on markdown files
+au BufRead,BufNewFile *.md setlocal textwidth=80
+set colorcolumn=+0
