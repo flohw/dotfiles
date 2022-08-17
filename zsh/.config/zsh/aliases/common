@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 alias ls='ls --color=always'
-alias ll='ls -lH'
+alias ll='ls -lHh'
 
 alias tree='tree -C'
 
