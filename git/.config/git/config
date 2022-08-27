@@ -18,3 +18,7 @@
 	current = "!git rev-parse --abbrev-ref HEAD"
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
+[fetch]
+	prune = true
