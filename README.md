@@ -15,7 +15,7 @@ stow --target $HOME --delete <package-name> -v
 
 - [chriskempson/base16](https://github.com/chriskempson/base16): base16 structure color schemes
 - [arcticicestudio/nord](https://github.com/arcticicestudio/nord): colors theme
-- [powerlevel9k](https://github.com/bhilburn/powerlevel9k): customizable zsh prompt
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k): customizable zsh prompt
     - [NerdFonts](https://github.com/ryanoasis/nerd-fonts): font used by powerleve9k
 - [xorg](https://cgit.freedesktop.org/xorg/xserver): In order to display graphics
     - [xsel](https://github.com/kfish/xsel): copy/past for X

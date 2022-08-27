@@ -9,7 +9,9 @@ All subsequent paths are base on `$ZDOTDIR` value.
 ## Aliases
 
 All aliases are listed in `aliases/` directory. All files are sourced in zshrc file.
-Aliases are groued by program or theme.
+Aliases are groued by program or theme. Each of these programms definig its own aliases
+must be in its own stow directory at the root of the project with the correct path to
+`$ZDOTDIR/plugins` directory.
 
 ## Functions
 
@@ -23,7 +25,9 @@ All common configuration as style, completion, history, etc are placed in this d
 ## Plugins
 
 All external plugins configuration are placed in this directory. They should be installed via git submodule.
-All plugins loaded via packages must be placed in `lib/plugins` file.
+All plugins loaded via packages must be placed in `lib/plugins` file. Any plugin which require a programm must
+be in its own stow directory et define the right path to `$ZDOTDIR/plugins` directory. It is possible to create
+subdirectories.
 
 ## Improvements
 
