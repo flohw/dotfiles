@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 alias -g H='|head'
 alias -g L='|less'
 alias -g M='|more'

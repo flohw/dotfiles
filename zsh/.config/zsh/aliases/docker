@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-[[ ! -x /usr/bin/docker-compose ]] && echo "docker-compose is not installed, run sudo pacman -S docker-compose" && return 0
+! command -v docker-compose > /dev/null && echo >&2 "docker-compose is not installed, run sudo pacman -S docker-compose" && return 0
 
 alias dc=docker-compose
 alias dce='docker-compose exec'
