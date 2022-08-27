@@ -25,6 +25,9 @@ alias gcm='git checkout master'
 alias gcd='git checkout develop'
 alias gco='git checkout'
 
+alias gsw='git switch'
+alias gswc='git switch -c'
+
 alias gd='git diff'
 alias gds='git diff --staged'
 
@@ -40,8 +43,13 @@ alias gpf!='git push --force'
 alias grh='git reset'
 alias grhh='git reset --hard'
 alias groh='git reset origin/$(git rev-parse --abbrev-ref HEAD) --hard'
+
 alias grup='git remote update --prune'
+
 alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase --interactive'
 
 alias gst='git status --short'
 alias gsb='git status --short --branch'
