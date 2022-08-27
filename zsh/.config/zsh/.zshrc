@@ -13,7 +13,7 @@ function load_files_in() {
     [[ ! "$(ls -A $ZDOTDIR/$1/)" ]] && return 1
     for f in $ZDOTDIR/$1/*; do
         [[ $f == *.zwc ]] && continue
-        source $f
+        [[ -f $f ]] && source $f || load_files_in ${f#$ZDOTDIR/}
     done
 }
 
@@ -22,5 +22,7 @@ function load_files_in() {
 [[ -d $ZDOTDIR/aliases ]] && load_files_in aliases
 [[ -d $ZDOTDIR/plugins ]] && load_files_in plugins
 [[ -d $ZDOTDIR/docker ]] && load_files_in docker
+
+unset load_files_in
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
