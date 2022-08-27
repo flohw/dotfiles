@@ -26,7 +26,8 @@ alias gcd='git checkout develop'
 alias gco='git checkout'
 
 alias gsw='git switch'
-alias gswc='git switch -c'
+alias gswc='git switch --create'
+alias gswd='git switch --detach'
 
 alias gd='git diff'
 alias gds='git diff --staged'
