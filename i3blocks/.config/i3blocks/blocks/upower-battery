@@ -1,17 +1,21 @@
 #!/usr/bin/env zsh
 upower_path=`upower -e|awk "/${mac//:/_}/"' {print $0}'`
 percentage=`upower -i $upower_path|awk '/percentage/ { print $2 }'|tr -d %`
-echo " $percentage%"
-echo " $percentage%"
 
+foreground=$(xrdb -get i3blocks.background)
 if [[ $percentage -lt 20 ]]; then
-  echo "#FF0000";
+  foreground=$(xrdb -get i3blocks.color1);
 elif [[ $percentage -lt 40 ]]; then
-  echo "#FFAE00";
+  foreground=$(xrdb -get i3blocks.color5);
 elif [[ $percentage -lt 60 ]]; then
-  echo "#FFF600";
+  foreground="#D08770";
 elif [[ $percentage -lt 85 ]]; then
-  echo "#A8FF00";
+  foreground=$(xrdb -get i3blocks.color4);
 fi
+
+echo $percentage%
+echo $percentage%
+echo $foreground
+echo $(xrdb -get i3blocks.color3)
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab

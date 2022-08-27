@@ -1,24 +1,43 @@
 # Global properties
 command=$XDG_CONFIG_HOME/i3blocks/blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=0
+separator=false
 markup=none
+border_right=0
+border_left=0
+border_top=2
+border_bottom=2
+border=#00000000
+full_text=
+
+[separator]
+color=#EBCB8B
 
 [packages]
-label=
+label=  
 interval=once
 signal=8
-markup=pango
+
+[separator]
+color=#2E3440
+background=#EBCB8B
 
 [github]
-label=
+label=   
 interval=900 # 15 minutes
 
+[separator]
+color=#81a1c1
+background=#2E3440
+
 [ip-public]
-label=
+label=  
 interval=10
-markup=pango
+
+[separator]
+color=#5e81ac
+background=#81a1c1
 
 [ip-local]
-label=囹
+label= 囹 
 interval=10
-markup=pango

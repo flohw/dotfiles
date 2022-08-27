@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+if [[ $BLOCK_BUTTON -eq 1 ]]; then
+    notify-send "`cal`"
+fi
+
+echo `date '+%Y-%m-%d %H:%M'`
+echo `date '+%Y-%m-%d %H:%M'`
+echo white
+echo $(xrdb -get i3blocks.background)

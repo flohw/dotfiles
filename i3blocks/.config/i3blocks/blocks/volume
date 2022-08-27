@@ -68,8 +68,13 @@ case $BLOCK_BUTTON in
 esac
 
 vol=$(volume|format)
-printf "% 4d%%\n" ${vol%\%*}
-printf "% 4d%%\n" ${vol%\%*}
-[[ ${vol%\%*} -ge 90 ]] && echo $(xrdb -query | grep color1 | cut -f2) # red
-[[ ${vol%\%*} -ge 80 && ${vol%\%*} -lt 90 ]] && echo $(xrdb -query | grep color3 | cut -f2) # orange
-[[ ${vol%\%*} -eq "MUTE" ]]  && echo ""
+foreground="$(xrdb -get i3blocks.foreground)"
+if [[ ${vol%\%*} -ge 90 ]]; then
+  foreground=$(xrdb -get i3blocks.color1) # red
+elif [[ ${vol%\%*} -ge 80 && ${vol%\%*} -lt 90 ]]; then
+  foreground=$(xrdb -get i3blocks.color3) # yellow
+fi
+printf "% 3d%%\n" ${vol%\%*}
+printf "% 3d%%\n" ${vol%\%*}
+echo $foreground
+echo $(xrdb -get i3blocks.color4)

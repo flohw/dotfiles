@@ -9,6 +9,7 @@ case $BLOCK_BUTTON in
 - Middle click to show upgradable packages" ;;
 esac
 
-echo "  <span color='white'>$(yay -Qu | grep -v "\[ignored\]" | wc -l)</span>"
-echo ''
-echo '#fba922'
+echo $(yay -Qu | grep -v "\[ignored\]" | wc -l)
+echo $(yay -Qu | grep -v "\[ignored\]" | wc -l)
+echo $(xrdb -get i3blocks.fadeColor)
+echo $(xrdb -get i3blocks.color3)

@@ -5,13 +5,15 @@ case $BLOCK_BUTTON in
 esac
 
 if [[ -n $IP_ADDRESS ]]; then
-  echo "<span color='white'> $IP_ADDRESS</span>"
   echo $IP_ADDRESS
+  echo $IP_ADDRESS
+  echo $(xrdb -get i3blocks.fadeColor)
 else
-  echo "<span color='magenta'> NO NETWORK</span>"
-  echo "NO NETWORK"
+  echo NO NETWORK
+  echo NO NETWORK
+  echo $(xrdb -get i3blocks.color1)
 fi
-echo "#cc342b"
+echo "#5e81ac"
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 

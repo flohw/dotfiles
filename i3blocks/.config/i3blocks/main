@@ -1,25 +1,41 @@
 # Global properties
 command=$XDG_CONFIG_HOME/i3blocks/blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=0
+separator=false
 markup=none
+border_right=0
+border_left=0
+border_top=2
+border_bottom=2
+border=#00000000
+full_text=
+
+[separator]
+color=#81A1C1
 
 # Volume indicator
 [volume]
-label=♪
+label=♪ 
 instance=Master
 interval=once
 signal=10
 
+[separator]
+color=#EBCB8B
+background=#81A1C1
+
 # Power statuses
 [upower-battery]
-label=⚡
+label=⚡ 
 mac=BAT0
-interval=once
+interval=300
 markup=pango
 
+[separator]
+color=#2E3440
+background=#EBCB8B
+
 # Date Time
-[time]
-command=echo " <span color='white'>"`date '+%Y-%m-%d %H:%M'`"</span>" && echo "<span color='white'>"`date '+%Y-%m-%d %H:%M'`"</span>" && echo '#198844'
-label=
+[date]
+label=  
 interval=60
-markup=pango
