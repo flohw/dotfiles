@@ -6,4 +6,4 @@ MAN=$(man -k . | sort | dmenu -l 10 | awk '{ print $2 " " $1 }' | tr -d '()')
 
 [[ -z $MAN ]] && exit
 
-st -t Man -T Man -e man -P "$MANPAGER --paging always'" $MAN
+st -t Man -T Man -e man -P "$MANPAGER' --paging always'" $MAN
