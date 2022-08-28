@@ -1,7 +1,3 @@
-##
-## 00 - Variables
-##
-
 # Modifier keys
 set $mod Mod4
 set $alt Mod1
@@ -14,8 +10,8 @@ set $right l
 
 # Global
 set $font             "pango:JetBrainsMono Nerd Font 12"
-set $i3_config_dir    $HOME/.config/i3
-set $i3_blocks_config $HOME/.config/i3blocks
+set $i3_config_dir    $XDG_CONFIG_HOME/i3
+set $i3_blocks_config $XDG_CONFIG_HOME/i3blocks
 
 # Worspace names
 set $ws01 "01  "
@@ -60,3 +56,11 @@ set $base0C #D08770
 set $base0D #EBCB8B
 set $base0E #A3BE8C
 set $base0F #B48EAD
+
+include applications.conf
+include workspaces.conf
+include theme.conf
+include rules.conf
+include modes.conf
+include windows.conf
+include config.d/$USER/*.conf
