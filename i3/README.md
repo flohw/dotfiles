@@ -2,20 +2,20 @@
 
 ## Global configuration
 
-All i3 configuration is splitted into multiple files in `.config/i3/file`. They are compiled into `.config/i3/config` by pressing `<C-S-c>`. They must be compiled manually the first time with `make`.
-Scripts are placed in `scripts` directory. All resources required by configuraion are placed in `resources`. This directory should be as light as possible. All resources should be compiled by a script by hand or binded to a keyboard shortcut.
+All i3 configuration is splitted into multiple files in `.config/i3/`. Per user configuration is in `.config/i3/config.d/` this is an attempt to
+have configuration depending on personnal or professionnal account. _Maybe creating an environment variable could be better_.
+Scripts are placed in `.config/i3/scripts` directory.
 
 ## Improvements
 
-- [ ] Improve first setup by compiling resources
 - [ ] Try to use local font for nerdfonts-dmenu instead of building a resource file
 - [ ] Refactor dmenu and update scripts as they are very similar
-- [ ] Global configuration
+- [x] Global configuration
 - [x] Use Xresources to set fonts
 - [x] Variable file
 - [ ] Shortcuts file
 - [x] i3 blocks
-- [ ] i3 gaps
+- [x] i3 gaps
 - [ ] Changing background
 - [ ] Scripts
     - [DisplaySelect](https://github.com/LukeSmithxyz/voidrice/blob/master/.scripts/i3cmds/displayselect) might be placed in xbindkeysrc
