@@ -1,10 +1,15 @@
 #!/usr/bin/env zsh
 
 if [[ $BLOCK_BUTTON -eq 1 ]]; then
-    notify-send "`cal`"
+    today=$(date +%e)
+    blue=$(xrdb -get dunst.color4)
+    cal=$(cal | sed "s/$today/<span bgcolor=\"$blue\">$today<\/span>/")
+    notify-send "`date \"+%a %d %B\"`" "<span gravity=\"west\" color=\"white\">$cal</span>"
 fi
 
-echo `date '+%Y-%m-%d %H:%M'`
-echo `date '+%Y-%m-%d %H:%M'`
+date=$(date  '+%Y-%m-%d %H:%M')
+
+echo $date
+echo $date
 echo white
 echo $(xrdb -get i3blocks.background)
