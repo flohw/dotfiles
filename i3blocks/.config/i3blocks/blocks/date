@@ -3,7 +3,7 @@
 if [[ $BLOCK_BUTTON -eq 1 ]]; then
     today=$(date +%e)
     blue=$(xrdb -get dunst.color4)
-    cal=$(cal | sed "s/$today/<span bgcolor=\"$blue\">$today<\/span>/")
+    cal=$(cal | sed "s/ $today / <span bgcolor=\"$blue\">$today<\/span> /")
     notify-send "`date \"+%a %d %B\"`" "<span gravity=\"west\" color=\"white\">$cal</span>"
 fi
 
