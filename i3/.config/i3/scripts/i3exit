@@ -5,7 +5,7 @@ case "$1" in
         lock
         ;;
     logout)
-        i3-msg exit
+        loginctl terminate-session ''
         ;;
     suspend)
         lock &
