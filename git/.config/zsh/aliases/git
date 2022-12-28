@@ -62,7 +62,7 @@ alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 
-alias gtl='gtl(){ git tag --sort=-v:refname -n -l ${1}\* }; noglob gtl'
+alias gtl='git tag --sort=-v:refname -ln'
 
 # vim:syntax=zsh
 
