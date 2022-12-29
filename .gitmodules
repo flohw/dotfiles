@@ -10,3 +10,9 @@
 [submodule "systemd/.local/share/wallpapers"]
 	path = systemd/.local/share/wallpapers
 	url = git@github.com:flohw/wallpapers
+[submodule "tmux/.config/tmux/plugins/nord-tmux"]
+	path = tmux/.config/tmux/plugins/nord-tmux
+	url = git@github.com:arcticicestudio/nord-tmux
+[submodule "tmux/.config/tmux/plugins/tmux-prefix-highlight"]
+	path = tmux/.config/tmux/plugins/tmux-prefix-highlight
+	url = git@github.com:tmux-plugins/tmux-prefix-highlight
