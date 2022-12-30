@@ -16,3 +16,6 @@
 [submodule "tmux/.config/tmux/plugins/tmux-prefix-highlight"]
 	path = tmux/.config/tmux/plugins/tmux-prefix-highlight
 	url = git@github.com:tmux-plugins/tmux-prefix-highlight
+[submodule "tmux/.config/tmux/plugins/tmux-open"]
+	path = tmux/.config/tmux/plugins/tmux-open
+	url = git@github.com:tmux-plugins/tmux-open
