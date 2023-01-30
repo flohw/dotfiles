@@ -9,4 +9,6 @@ alias lsblk='lsblk -o NAME,LABEL,SIZE,FSUSED,FSUSE%,FSAVAIL,MOUNTPOINT,FSTYPE'
 
 alias _='sudo'
 
+alias grep="grep --color=auto"
+
 # vim:syntax=zsh
