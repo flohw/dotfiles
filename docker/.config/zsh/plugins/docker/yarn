@@ -1,13 +1,13 @@
 #!/usr/bin/env zsh
 
-yarn() {
-    docker run --rm --interactive --tty \
-        --user $(id -u):$(id -g) \
-        --volume $PWD:/app \
-        --workdir /app \
-        --publish ${PORT:-3000}:3000 \
-        node yarn "$@"
-}
+# yarn() {
+#     docker run --rm --interactive --tty \
+#         --user $(id -u):$(id -g) \
+#         --volume $PWD:/app \
+#         --workdir /app \
+#         --publish ${PORT:-3000}:${PORT:-8080} \
+#         node yarn "$@"
+# }
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
 

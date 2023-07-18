@@ -14,6 +14,12 @@ fi
 
 
 numlockx &
+# FOR VSCODE INTERACTIONS IN LIVESHARE
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+eval $(/usr/bin/gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+mkdir -p $HOME/.local/share/keyrings
+# END VSCODE
 pidof i3 > /dev/null || exec i3
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab

@@ -37,6 +37,10 @@ set $ws20 "20"
 set $ws21 "21"
 set $ws22 "22"
 
+set $lftMonitor eDP-1
+set $ctrMonitor DP-1-1
+set $rgtMonitor DP-1-2
+
 # Colors from Nord theme
 
 set $transparent #00000000

@@ -11,24 +11,12 @@ border=#00000000
 full_text=
 
 [separator]
-color=#81A1C1
-
-# Volume indicator
-[volume]
-label=♪ 
-instance=Master
-interval=once
-signal=10
-
-[separator]
 color=#EBCB8B
-background=#81A1C1
 
-# Power statuses
 [upower-battery]
-label=⚡ 
+label=⚡
 mac=BAT0
-interval=300
+interval=15
 
 [upower-battery]
 label=  
@@ -44,7 +32,6 @@ interval=15
 color=#2E3440
 background=#EBCB8B
 
-# Date Time
 [date]
-label=  
+label= 
 interval=60

@@ -1,6 +1,9 @@
 clear control
 clear mod4
 
+keycode 49 = less greater
+keycode 94 = at numbersign
+
 keycode 105 =
 keycode 206 =
 
@@ -16,6 +19,7 @@ keycode 194 = XF86AudioMute NoSymbol XF86AudioMute
 keycode 197 = XF86AudioRaiseVolume NoSymbol XF86AudioRaiseVolume
 keycode 196 = XF86AudioLowerVolume NoSymbol XF86AudioLowerVolume
 keycode 105 = Super_R
+keycode 104 = Insert
 
 add control = Control_L
 add control = Control_R

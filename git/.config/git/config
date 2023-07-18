@@ -26,3 +26,8 @@
 	prune = true
 [push]
 	autoSetupRemote = true
+
+[includeIf "gitdir:~/projects/perso/**/*.git"]
+    path = ~/.config/git/includes/perso
+[includeIf "gitdir:~/projects/pro/**/*.git"]
+    path = ~/.config/git/includes/pro

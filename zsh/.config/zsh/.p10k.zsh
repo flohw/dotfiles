@@ -74,14 +74,14 @@
   # Current directory background color.
   typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
   # Default current directory foreground color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=254
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=7
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=250
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=8
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=255
@@ -154,7 +154,8 @@
   # Untracked files icon. It's really a question mark, your font isn't broken.
   # Change the value of this parameter to show a different icon.
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON='\uF420 '
-
+  typeset -g POWERLEVEL9K_VCS_BACKGROUND=0
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=2
   # Formatter for Git status.
   #
   # Example output: master ⇣42⇡42 *42 merge ~42 +42 !42 ?42.
@@ -173,37 +174,59 @@
       return
     fi
 
-    # Styling for different parts of Git status.
-    local       meta='%7F' # white foreground
-    local      clean='%0F' # black foreground
-    local   modified='%0F' # black foreground
-    local  untracked='%0F' # black foreground
-    local conflicted='%1F' # red foreground
+#    if (( $1 )); then
+      # Styling for up-to-date Git status.
+      local       meta='%F' # '%f'     # default foreground
+      local      clean='%007F' # '%76F'   # white foreground
+      local   modified='%003F' # '%178F'  # yellow foreground
+      local  untracked='%008F' # '%39F'   # grey foreground
+      local conflicted='%001F' # '%196F'  # red foreground
+#    else
+#      # Styling for incomplete and stale Git status.
+#      local       meta='%244F'  # grey foreground
+#      local      clean='%244F'  # grey foreground
+#      local   modified='%244F'  # grey foreground
+#      local  untracked='%244F'  # grey foreground
+#      local conflicted='%244F'  # grey foreground
+#    fi
 
     local res
-    local where  # branch or tag
+
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
-      res+="${clean}${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}"
-      where=${(V)VCS_STATUS_LOCAL_BRANCH}
-    elif [[ -n $VCS_STATUS_TAG ]]; then
-      res+="${meta}#"
-      where=${(V)VCS_STATUS_TAG}
+      local branch=${(V)VCS_STATUS_LOCAL_BRANCH}
+      # If local branch name is at most 32 characters long, show it in full.
+      # Otherwise show the first 12 … the last 12.
+      # Tip: To always show local branch name in full without truncation, delete the next line.
+      (( $#branch > 32 )) && branch[13,-13]="…"  # <-- this line
+      res+="${clean}${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}${branch//\%/%%}"
     fi
 
-    # If local branch name or tag is at most 32 characters long, show it in full.
-    # Otherwise show the first 12 … the last 12.
-    # Tip: To always show local branch name in full without truncation, delete the next line.
-    (( $#where > 32 )) && where[13,-13]="…"
+    if [[ -n $VCS_STATUS_TAG
+          # Show tag only if not on a branch.
+          # Tip: To always show tag, delete the next line.
+          # && -z $VCS_STATUS_LOCAL_BRANCH  # <-- this line
+        ]]; then
+      local tag=${(V)VCS_STATUS_TAG}
+      # If tag name is at most 32 characters long, show it in full.
+      # Otherwise show the first 12 … the last 12.
+      # Tip: To always show tag name in full without truncation, delete the next line.
+      (( $#tag > 32 )) && tag[13,-13]="…"  # <-- this line
+      res+="${modified}  ${tag//\%/%%}${clean}"
+    fi
 
-    res+="${clean}${where//\%/%%}"  # escape %
-
-    # Display the current Git commit if there is no branch or tag.
-    # Tip: To always display the current Git commit, remove `[[ -z $where ]] &&` from the next line.
-    [[ -z $where ]] && res+="${meta} ${clean}${VCS_STATUS_COMMIT[1,8]}"
+    # Display the current Git commit if there is no branch and no tag.
+    # Tip: To always display the current Git commit, delete the next line.
+    [[ -z $VCS_STATUS_LOCAL_BRANCH && -z $VCS_STATUS_TAG ]] &&  # <-- this line
+      res+="${meta}@${clean}${VCS_STATUS_COMMIT[1,8]}"
 
     # Show tracking branch name if it differs from local branch.
     if [[ -n ${VCS_STATUS_REMOTE_BRANCH:#$VCS_STATUS_LOCAL_BRANCH} ]]; then
-      res+="${meta}:${clean}${(V)VCS_STATUS_REMOTE_BRANCH//\%/%%}"  # escape %
+      res+="${meta}:${clean}${(V)VCS_STATUS_REMOTE_BRANCH//\%/%%}"
+    fi
+
+    # Display "wip" if the latest commit's summary contains "wip" or "WIP".
+    if [[ $VCS_STATUS_COMMIT_SUMMARY == (|*[^[:alnum:]])(wip|WIP)(|[^[:alnum:]]*) ]]; then
+      res+=" ${modified}wip"
     fi
 
     # ⇣42 if behind the remote.
