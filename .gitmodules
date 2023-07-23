@@ -19,3 +19,6 @@
 [submodule "tmux/.config/tmux/plugins/tmux-open"]
 	path = tmux/.config/tmux/plugins/tmux-open
 	url = git@github.com:tmux-plugins/tmux-open
+[submodule "tmux/.config/tmux/plugins/tmux-pomodoro-plus"]
+	path = tmux/.config/tmux/plugins/tmux-pomodoro-plus
+	url = git@github.com:olimorris/tmux-pomodoro-plus
