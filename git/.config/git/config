@@ -26,3 +26,5 @@
 	prune = true
 [push]
 	autoSetupRemote = true
+[include]
+    path = ./user.conf
