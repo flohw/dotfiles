@@ -1,0 +1,71 @@
+diff --git a/nord.tmux b/nord.tmux
+index e98ad6b..68c5eeb 100755
+--- a/nord.tmux
++++ b/nord.tmux
+@@ -15,6 +15,8 @@ NORD_TMUX_STATUS_CONTENT_NO_PATCHED_FONT_FILE="src/nord-status-content-no-patche
+ NORD_TMUX_STATUS_CONTENT_OPTION="@nord_tmux_show_status_content"
+ NORD_TMUX_STATUS_CONTENT_DATE_FORMAT="@nord_tmux_date_format"
+ NORD_TMUX_NO_PATCHED_FONT_OPTION="@nord_tmux_no_patched_font"
++NORD_TMUX_SHOW_DATE="@nord_tmux_show_date"
++NORD_TMUX_SHOW_TIME="@nord_tmux_show_time"
+ _current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ 
+ __cleanup() {
+@@ -22,6 +24,7 @@ __cleanup() {
+   unset -v NORD_TMUX_STATUS_CONTENT_FILE NORD_TMUX_STATUS_CONTENT_NO_PATCHED_FONT_FILE
+   unset -v NORD_TMUX_STATUS_CONTENT_OPTION NORD_TMUX_NO_PATCHED_FONT_OPTION
+   unset -v NORD_TMUX_STATUS_CONTENT_DATE_FORMAT
++  unset -v NORD_TMUX_SHOW_DATE NORD_TMUX_SHOW_TIME
+   unset -v _current_dir
+   unset -f __load __cleanup
+   tmux set-environment -gu NORD_TMUX_STATUS_TIME_FORMAT
+@@ -34,6 +37,8 @@ __load() {
+   local status_content=$(tmux show-option -gqv "$NORD_TMUX_STATUS_CONTENT_OPTION")
+   local no_patched_font=$(tmux show-option -gqv "$NORD_TMUX_NO_PATCHED_FONT_OPTION")
+   local date_format=$(tmux show-option -gqv "$NORD_TMUX_STATUS_CONTENT_DATE_FORMAT")
++  local show_date=$(tmux show-option -gqv "$NORD_TMUX_SHOW_DATE")
++  local show_time=$(tmux show-option -gqv "$NORD_TMUX_SHOW_TIME")
+ 
+   if [ "$(tmux show-option -gqv "clock-mode-style")" == '12' ]; then
+     tmux set-environment -g NORD_TMUX_STATUS_TIME_FORMAT "%I:%M %p"
+@@ -41,11 +46,9 @@ __load() {
+     tmux set-environment -g NORD_TMUX_STATUS_TIME_FORMAT "%H:%M"
+   fi
+ 
+-  if [ -z "$date_format" ]; then
+-    tmux set-environment -g NORD_TMUX_STATUS_DATE_FORMAT "%Y-%m-%d"
+-  else
+-    tmux set-environment -g NORD_TMUX_STATUS_DATE_FORMAT "$date_format"
+-  fi
++  tmux set-environment -g NORD_TMUX_STATUS_DATE_FORMAT ${date_format:-%Y-%m-%d}
++  tmux set-environment -g NORD_TMUX_SHOW_DATE ${show_date:-1}
++  tmux set-environment -g NORD_TMUX_SHOW_TIME ${show_time:-1}
+ 
+   if [ "$status_content" != "0" ]; then
+     if [ "$no_patched_font" != "1" ]; then
+diff --git a/src/nord-status-content-no-patched-font.conf b/src/nord-status-content-no-patched-font.conf
+index c9aa15f..b6b9149 100644
+--- a/src/nord-status-content-no-patched-font.conf
++++ b/src/nord-status-content-no-patched-font.conf
+@@ -16,7 +16,7 @@ set -g @prefix_highlight_copy_mode_attr "fg=black,bg=brightcyan"
+ #+--------+
+ #+--- Bars ---+
+ set -g status-left "#[fg=black,bg=blue,bold] #S "
+-set -g status-right "#{prefix_highlight}#[fg=white,bg=brightblack] ${NORD_TMUX_STATUS_DATE_FORMAT} #[fg=white,bg=brightblack,nobold,noitalics,nounderscore]|#[fg=white,bg=brightblack] ${NORD_TMUX_STATUS_TIME_FORMAT} #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore] #[fg=black,bg=cyan,bold] #H "
++set -g status-right "#{pomodoro_status}#{prefix_highlight}#{?#{NORD_TMUX_SHOW_DATE},#[fg=white]#[bg=brightblack] ${NORD_TMUX_STATUS_DATE_FORMAT} ,}#{?#{&&:#{NORD_TMUX_SHOW_DATE},#{NORD_TMUX_SHOW_TIME}},#[fg=white]#[bg=brightblack]#[nobold]#[noitalics]#[nounderscore]|,}#{?#{NORD_TMUX_SHOW_TIME},#[fg=white]#[bg=brightblack] ${NORD_TMUX_STATUS_TIME_FORMAT} ,}#[fg=black,bg=cyan,bold] #H "
+ 
+ #+--- Windows ---+
+ set -g window-status-format " #[fg=white,bg=brightblack]#I #[fg=white,bg=brightblack]#W #F"
+diff --git a/src/nord-status-content.conf b/src/nord-status-content.conf
+index ab5a6fa..ee35e1e 100644
+--- a/src/nord-status-content.conf
++++ b/src/nord-status-content.conf
+@@ -18,7 +18,7 @@ set -g @prefix_highlight_copy_mode_attr "fg=brightcyan,bg=black,bold"
+ #+--------+
+ #+--- Bars ---+
+ set -g status-left "#[fg=black,bg=blue,bold] #S #[fg=blue,bg=black,nobold,noitalics,nounderscore]"
+-set -g status-right "#{prefix_highlight}#[fg=brightblack,bg=black,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] ${NORD_TMUX_STATUS_DATE_FORMAT} #[fg=white,bg=brightblack,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] ${NORD_TMUX_STATUS_TIME_FORMAT} #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore]#[fg=black,bg=cyan,bold] #H "
++set -g status-right "#{prefix_highlight}#{?#{||:#{NORD_TMUX_SHOW_DATE},#{NORD_TMUX_SHOW_TIME}},#[fg=brightblack]#[bg=black]#[nobold]#[noitalics]#[nounderscore],}#{?#{NORD_TMUX_SHOW_DATE},#[fg=white]#[bg=brightblack] ${NORD_TMUX_STATUS_DATE_FORMAT} ,}#[fg=#{?#{NORD_TMUX_SHOW_DATE},white,brightblack},bg=#{?NORD_TMUX_SHOW_DATE,brightblack,black},nobold,noitalics,nounderscore]#{?#{&&:#{NORD_TMUX_SHOW_DATE},#{NORD_TMUX_SHOW_TIME}},,}#{?#{NORD_TMUX_SHOW_TIME},#[fg=white]#[bg=brightblack] ${NORD_TMUX_STATUS_TIME_FORMAT} ,}#[fg=cyan,bg=#{?#{||:#{NORD_TMUX_SHOW_DATE},#{NORD_TMUX_SHOW_TIME}},brightblack,default},nobold,noitalics,nounderscore]#[fg=black,bg=cyan,bold] #H "
+ 
+ #+--- Windows ---+
+ set -g window-status-format "#[fg=black,bg=brightblack,nobold,noitalics,nounderscore] #[fg=white,bg=brightblack]#I #[fg=white,bg=brightblack,nobold,noitalics,nounderscore] #[fg=white,bg=brightblack]#W #F #[fg=brightblack,bg=black,nobold,noitalics,nounderscore]"
