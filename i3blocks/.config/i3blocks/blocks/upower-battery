@@ -4,10 +4,8 @@ percentage=`upower -i $upower_path|awk '/percentage/ { print $2 }'|tr -d %`
 
 foreground=$(xrdb -get i3blocks.background)
 if [[ $percentage -lt 20 ]]; then
-  notify-send --urgency critical "Batterie très faible ($percentage%)" "Batterie très faible, il faut brancher le chargeur !"
   foreground=$(xrdb -get i3blocks.color1);
 elif [[ $percentage -lt 40 ]]; then
-  notify-send --urgency critical "Batterie faible ($percentage%)" "Batterie faible, il faut penser à branchger le chargeur."
   foreground=$(xrdb -get i3blocks.color5);
 elif [[ $percentage -lt 60 ]]; then
   foreground="#D08770";
