@@ -5,6 +5,17 @@
 alias dc=docker-compose
 alias dce='docker-compose exec'
 alias dcl='docker-compose logs -f'
+alias dcrm='docker-compose rm'
+
+alias dil='docker images list'
+alias dirm='docker image rm'
+alias dnl='docker network list'
+alias dnrm='docker network rm'
+alias dvl='docker volume list'
+alias dvrm='docker volume rm'
+alias drm='docker rm'
+alias dps='docker ps'
+alias dpsa='docker ps --all'
 
 # vim:syntax=zsh
 
