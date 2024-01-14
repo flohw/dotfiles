@@ -6,7 +6,7 @@ php() {
         --volume $PWD:/app \
         --workdir /app \
         --publish ${PORT:-80}:8000 \
-        php:${VERSION:-8.2-cli} \
+        php:${VERSION:-8.3-cli} \
         php "$@"
 }
 
