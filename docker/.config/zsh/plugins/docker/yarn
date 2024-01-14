@@ -6,7 +6,7 @@ yarn() {
         --volume $PWD:/app \
         --workdir /app \
         --publish ${PORT:-3000}:3000 \
-        node:16 yarn "$@"
+        node:21 yarn "$@"
 }
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
