@@ -26,5 +26,7 @@
 	prune = true
 [push]
 	autoSetupRemote = true
+[init]
+    defaultBranch = main
 [include]
     path = ./user.conf
