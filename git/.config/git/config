@@ -28,5 +28,8 @@
 	autoSetupRemote = true
 [init]
     defaultBranch = main
-[include]
-    path = ./user.conf
+
+[includeIf "gitdir:~/projects/perso/"]
+    path = ~/.config/git/includes/perso
+[includeIf "gitdir:~/projects/pro/"]
+    path = ~/.config/git/includes/pro
