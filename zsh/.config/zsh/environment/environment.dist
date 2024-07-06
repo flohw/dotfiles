@@ -10,6 +10,7 @@ export PATH=$PATH:$LOCAL_BIN
 export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store
 export GPG_TTY=$(tty)
 which bat > /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+CDPATH=($HOME/projects/pro $HOME/projects/perso)
 
 [[ ! -d $LOCAL_BIN ]] && mkdir -p $LOCAL_BIN
 unset LOCAL_BIN
