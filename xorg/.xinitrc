@@ -12,8 +12,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-
 numlockx &
+udiskie &
 pidof i3 > /dev/null || exec i3
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
