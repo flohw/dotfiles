@@ -11,4 +11,6 @@ alias _='sudo'
 
 alias grep="grep --color=auto"
 
+alias calc="noglob calc"
+
 # vim:syntax=zsh
