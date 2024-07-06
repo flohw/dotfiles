@@ -1,11 +1,11 @@
 #!/usr/bin/env zsh
 
-! command -v docker-compose > /dev/null && echo >&2 "docker-compose is not installed, run sudo pacman -S docker-compose" && return 0
+! command -v docker > /dev/null && echo >&2 "docker and/or docker compose are not installed, run sudo pacman -S docker docker-compose" && return 0
 
-alias dc=docker-compose
-alias dce='docker-compose exec'
-alias dcl='docker-compose logs -f'
-alias dcrm='docker-compose rm'
+alias dc=docker compose
+alias dce='docker compose exec'
+alias dcl='docker compose logs -f'
+alias dcrm='docker compose rm'
 
 alias dil='docker images list'
 alias dirm='docker image rm'
