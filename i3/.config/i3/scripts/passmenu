@@ -7,19 +7,25 @@ if [[ $1 == "--type" ]]; then
 	typeit=1
 	shift
 fi
+totp=0
+if [[ $1 == "--totp" ]]; then
+  totp=1
+  shift
+fi
 
 prefix=${PASSWORD_STORE_DIR-~/.password-store}
 password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
-
-password=$(printf '%s\n' "${password_files[@]}" | dmenu "$@")
+password=$(printf '%s\n' "${password_files[@]}" | dmenu "${@:1}")
 
 [[ -n $password ]] || exit
 
-if [[ $typeit -eq 0 ]]; then
+if [[ $typeit -eq 0 && $totp -eq 0 ]]; then
 	pass show -c "$password" 2>/dev/null
-else
-	pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } |
-		xdotool type --clearmodifiers --file -
+elif [[ $typeit -eq 1 ]]; then
+	$TERMINAL -t "Password show" -T "Password show" \
+  -e zsh -c "pass show \"$password\" 2>/dev/null && read -sk1"
+elif [[ $totp -eq 1 ]]; then
+  pass otp $password | xsel --input --clipboard
 fi
