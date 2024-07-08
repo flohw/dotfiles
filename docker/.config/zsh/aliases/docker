@@ -2,7 +2,7 @@
 
 ! command -v docker > /dev/null && echo >&2 "docker and/or docker compose are not installed, run sudo pacman -S docker docker-compose" && return 0
 
-alias dc=docker compose
+alias dc='docker compose'
 alias dce='docker compose exec'
 alias dcl='docker compose logs -f'
 alias dcrm='docker compose rm'
