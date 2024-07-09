@@ -63,4 +63,5 @@ include theme.conf
 include rules.conf
 include modes.conf
 include windows.conf
+include config.d/$USER/variables.conf
 include config.d/$USER/*.conf
