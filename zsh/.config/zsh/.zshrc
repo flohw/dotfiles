@@ -1,14 +1,5 @@
 #!/usr/bin/env zsh
 
-if [[ $DISPLAY ]]; then
-    [[ $- != *i* || ! -x /usr/bin/tmux ]] && return 0
-    if [[ -z $TMUX ]] && tmux has-session -t $USER 2> /dev/null; then
-        exec tmux -2 attach-session -t $USER
-    elif [[ -z $TMUX ]]; then
-        exec tmux -2 new-session -s $USER
-    fi
-fi
-
 function load_files_in() {
     [[ ! "$(ls -A $ZDOTDIR/$1/)" ]] && return 1
     for f in $ZDOTDIR/$1/*; do
