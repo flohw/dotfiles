@@ -24,10 +24,17 @@
 	gpgsign = true
 [fetch]
 	prune = true
+	pruneTags = true
+	all = true
 [push]
 	autoSetupRemote = true
 [init]
     defaultBranch = main
+[rebase]
+    autosquash = true
+    autostash = true
+[tag]
+    sort = version:refname
 
 [includeIf "gitdir:~/projects/perso/"]
     path = ~/.config/git/includes/perso
