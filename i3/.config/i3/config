@@ -1,8 +1,9 @@
 # Modifier keys
 set $mod Mod4
 set $alt Mod1
+set $ctl Control
 
-# Keys used to move arond
+# Keys used to move around
 set $up    k
 set $down  j
 set $left  h
