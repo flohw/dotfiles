@@ -9,8 +9,9 @@ LOCAL_BIN=$HOME/.local/bin
 export PATH=$PATH:$LOCAL_BIN
 export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store
 export GPG_TTY=$(tty)
+export CALCHISTFILE=$XDG_CACHE_HOME/calc_history
 which bat > /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-CDPATH=($HOME/projects/pro $HOME/projects/perso)
+export CDPATH=$HOME/projects/pro:$HOME/projects/perso
 
 [[ ! -d $LOCAL_BIN ]] && mkdir -p $LOCAL_BIN
 unset LOCAL_BIN
