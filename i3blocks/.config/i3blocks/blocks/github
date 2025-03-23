@@ -4,7 +4,7 @@
 [[ -z $GH_TOKEN ]] && notify-send -u critical "[i3blocks] Github" "GH_TOKEN is not defined" && exit
 
 case $BLOCK_BUTTON in
-  1) firefox https://github.com/notifications
+  1) xdg-open https://github.com/notifications > /dev/null
 esac
 
 echo $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length)
