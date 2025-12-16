@@ -3,7 +3,7 @@
 HISTFILE=$ZCACHEDIR/history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
-HISTORY_IGNORE="&|[ ]*|exit|ls *|ll *|bg|fg|history" # Do not add these commands to history
+HISTORY_IGNORE="(&|[ ]*|exit|l[sla]*|echo*|bg|fg|history)" # Do not add these commands to history
 
 setopt HIST_IGNORE_ALL_DUPS # Ignore duplicated commands
 setopt HIST_IGNORE_DUPS     # Ignore duplicated commands history list
