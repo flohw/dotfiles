@@ -7,7 +7,7 @@ case $BLOCK_BUTTON in
   1) xdg-open https://github.com/notifications > /dev/null
 esac
 
-echo $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length)
-echo $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length)
+echo $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length || -)
+echo $(curl -su flohw:$GH_TOKEN https://api.github.com/notifications |jq length || -)
 echo $(xrdb -get i3blocks.foreground)
 echo $(xrdb -get i3blocks.background)
