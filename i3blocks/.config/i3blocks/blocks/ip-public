@@ -1,7 +1,14 @@
-IP_PUBLIC=$(curl ipinfo.io/ip 2> /dev/null)
+cache=/tmp/i3blocks-ip-public
+refresh() {
+  curl ipinfo.io/ip 2> /dev/null > $cache
+}
+
+[ ! -f $cache ] && refresh
+IP_PUBLIC=$(cat $cache)
 
 case $BLOCK_BUTTON in
-  3) echo -n $IP_PUBLIC | xsel --input --clipboard;
+  1) refresh;;
+  3) echo -n $IP_PUBLIC | xsel --input --clipboard;;
 esac
 
 if [[ -n $IP_PUBLIC ]]; then
@@ -16,4 +23,3 @@ fi
 echo $(xrdb -get i3blocks.color4)
 
 # vim:syntax=zsh tabstop=4 shiftwidth=4 expandtab
-
