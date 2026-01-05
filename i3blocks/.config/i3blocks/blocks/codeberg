@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+[[ ! -f /usr/bin/jq ]] && notify-send -u critical "[i3blocks] Codeberg" "jq is not installed" && exit
+[[ -z $CB_TOKEN ]] && notify-send -u critical "[i3blocks] Codeberg" "GH_TOKEN is not defined" && exit
+
+case $BLOCK_BUTTON in
+  1) xdg-open https://codeberg.org/notifications > /dev/null
+esac
+notifications=$(curl -s "https://codeberg.org/api/v1/notifications?token=$CB_TOKEN" |jq length || -)
+
+echo " $notifications"
+echo " $notifications"
+echo $(xrdb -get i3blocks.foreground)
+echo $(xrdb -get i3blocks.background)
