@@ -6,6 +6,7 @@ alias dc='docker compose'
 alias dce='docker compose exec'
 alias dcl='docker compose logs -f'
 alias dcrm='docker compose rm'
+alias dcr='docker compose run'
 
 alias dil='docker images list'
 alias dirm='docker image rm'
@@ -18,4 +19,3 @@ alias dps='docker ps'
 alias dpsa='docker ps --all'
 
 # vim:syntax=zsh
-
