@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-source ${ZDOTDIR}/environment/environment
+for env in $(ls $ZDOTDIR/environment -I "*.dist");
+    source $ZDOTDIR/environment/$env
 
 if [[ -x /usr/bin/startx && ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     exec startx

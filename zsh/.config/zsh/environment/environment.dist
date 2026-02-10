@@ -16,6 +16,3 @@ export CDPATH=$HOME/projects/pro:$HOME/projects/perso
 
 [[ ! -d $LOCAL_BIN ]] && mkdir -p $LOCAL_BIN
 unset LOCAL_BIN
-
-### SECRET ENV ###
-export GH_TOKEN=
