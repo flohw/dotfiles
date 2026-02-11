@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 IP_ADDRESS=$(ip route get 1 2> /dev/null | sed 's/^.*src \([^ ]*\).*$/\1/;q')
 
 case $BLOCK_BUTTON in

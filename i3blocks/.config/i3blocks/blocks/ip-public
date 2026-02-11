@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 cache=/tmp/i3blocks-ip-public
 refresh() {
   curl ipinfo.io/ip 2> /dev/null > $cache
