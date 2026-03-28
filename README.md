@@ -1,5 +1,7 @@
 # Dotfiles
 
+READONLY repository. Migrated to https://codeberg.org/Flohw/dotfiles
+
 Here are my dotfiles.
 
 Use stow to install packages:
